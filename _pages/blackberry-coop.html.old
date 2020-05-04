@@ -1,0 +1,158 @@
+---
+layout: archive
+title: "BlackBerry Coop"
+permalink: /blackberry-coop/
+author_profile: true
+redirect_from:
+  - /blackberry-coop
+---
+
+{% include base_path %}
+
+Fall of 2018 Workterm Report.
+<br/>
+January 10th, 2019.
+<br/><br/>
+
+<div id="toc_container">
+<p class="toc_title">Table of Contents</p>
+<ul class="toc_list">
+  <li><a href="#List_of_illustrations">List of Illustrations</a></li>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#About_BlackBerry">About BlackBerry</a></li>
+  <li><a href="#Job_Description">Job Description</a></li>
+    <ul>
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Testing_experience">Testing Experience</a></li>
+      <li><a href="#Skillset">Skills on the Job</a></li>
+      <li><a href="#Main_project">Main Project</a></li>
+    </ul>
+  <li><a href="#Goals">Goals</a></li>
+    <ul>
+      <li><a href="#Learn_new_skill_sets">Learn new skill sets</a></li>
+      <li><a href="#Identify_my_weaknesses">Identify my weaknesses</a></li>
+      <li><a href="#Performance">Perform beyond expectations</a></li>
+    </ul>
+  <li><a href="#Recommendations">Recommendations</a></li>
+  <li><a href="#Conclusions">Conclusions</a></li>
+  <li><a href="#Acknowledgements">Acknowledgements</a></li>
+  <li><a href="#References">References</a></li>
+  <li><a href="#Employer_eval">Employer Evaluation Form</a></li>
+  <li><a href="#See_also">See Also</a></li>
+</ul>
+</div>
+<div id="toc_container">
+
+<p class="toc_title" id="List_of_illustrations">List of Illustrations</p>
+<ul class="toc_list">
+  <li><a href="#SDLC">The Software Development Cycle</a></li>
+  <li><a href="#Developers_testing">Testing Frustration Example</a></li>
+</ul>
+</div>
+
+
+<h2 id="Introduction">Introduction</h2>
+Welcome to my BlackBerry Coop review. Through this page, you'll learn about my first University coop experience, including my thoughts, goals and a bit of background on both my position and what the company was about.
+
+
+<h2 id="About_BlackBerry">About BlackBerry</h2>
+BlackBerry Limited, previously known as Research In Motion, is a Canadian tech company that focuses on secure enterprise software and the Internet of things.<sup><a href="#cyberscoop">[1]</a></sup> Founded in 1984 by Mike Lazaridis and Douglas Fregin, BlackBerry has become a multinational corporation best known for their BlackBerry devices and cybersecurity.<sup><a href="#nationalpost">[2]</a></sup>
+
+
+<h2 id="Job_Description">Job Description</h2>
+The role of a test automation developer is to design and write programs that run autonomous tests on new or existing software. It is a crucial part of the software development cycle, and generally stands between the building of the software and depoloyment.<sup><a href="#targetjobs">[3]</a></sup>
+
+<center><i>Figure 1.0 - The Software Development Cycle</i><br/><img src="https://dginovker.github.io/files/SDLC.jpg?raw=true" alt="Photo" id="SDLC" /><br/>Cosgrove, Cameron (2016-01-13). <a href="http://digitalcto.com/can-you-build-software-faster-cheaper-and-better/">"DevOps builds software better, cheaper and faster"</a>. <i>DigitalCTO.</i></center>
+
+
+<h3 id="Overview">Test Automation Developer in the Mobility Solutions Team at BlackBerry</h3>
+
+As a Test Automation Student on the Mobility Solutions team, my primary role was to provide test suite results as soon as possible after a new productivity app build. Releases were usually done once or twice a week across two different app versions, where one would be hotfixing and the other would be development. Beyond that, my role involved building the test suite infrastructure, and working with developers to fix any problems that were being had.
+<br/><br/>
+<h3 id="Testing_experience">Testing Experience</h3>
+<center><i>Figure 2.0: Developers on Twitter dealing with the test frustration experience</i></br><img src="https://dginovker.github.io/files/developers_testing.jpg?raw=true" alt="Photo" style="width: 450px;" id="Developers_testing"/><br/></center>
+<br/>
+Test automation can be a frustrating, yet highly rewarding experience. It's very difficult to get the job right, and requires a lot of knowledge in a lot of different areas of computer science. 
+<br/><br/>
+On the Mobility Solutions team at BlackBerry, test suites were done programmatically and ran autonomously, but it was important to quickly respond to any failures. A product failure would require an immediate creation of a Jira task, and it is important to quickly get in touch with the developers behind that component to see if they need more help testing the fixes for the bug. Test failures, where the test crashed or reported inaccurate results, have a slightly lesser priority, where the root cause would need to be identified, before a Jira task would be created and triaged to fix the test case itself.
+<br/><br/>
+However, maintenance and expanding the test infrastructure was an equally large role. While you might not always be the one fixing the broken test cases you report, it's important to know how it's done so you can create more insightful Jiras for others to follow. Additionally, the creation (or cleanup and optimization) of new suites helps provide new coverage and confidence in builds being prepared for a release; and in some cases, makes a really big difference when showing coverage for something not previously had.
+
+<h3 id="Skillset">Skills on the Job</h3>
+Most of the development on the job was done in Android Studio, but that's not necessarily where all the skills came from. All the hard skills had been taught in school, such as Java, git and basic linux, but beyond the actual development, many additional testing and project management skills were required. Jira and Gerrit were the two dominate tools for product management, where Jira logged tasks and issues for the team to handle and Gerrit provided a clean interfact to peer review code. These along with, Jenkins, a tool for running automated tests, where easily learned on the job and there was always help available from within the team. So as long as you follow along both in school and at work, there's no surprises there!
+
+<h3 id="Main_project">Main Project - Application Profiling Automation</h3>
+One day, I was assigned to help him collect some data regarding launch and load times within some of the apps. Most of the data was collected by clicking a few buttons on an app, then reading the log lines and calculating various things.
+<br/><br/>
+It was a bit odd of a task, and I found it rather mundane and repetitive. I was more than happy to do it, but it just didn't feel like I was being efficient with my time - and half an hour later, I was still not even halfway through. So I stopped, and I thought how I could make this better.
+<br/><br/>
+The first thing I did was write a very hacky, command-line script that would parse out the logfile and make it so I could just copy the raw data into a file to manipulate. After doing that for a few more minutes, I opened up Android Studio and wrote a second very hacky Espresso test, which I had learned from copy-and-pasting code off other files. Combined, the Espresso test would click the buttons on the app, and my command-line script would parse the output to a file. I sat back for a moment and watched it do my work for me, and continued with some other developments while it worked away.
+<br/><br/>
+During a meeting the next day, my manager asked about the data and if I got around to collecting it. Alongside the data that I presented, I explained that it was a tedious and potentially inaccurate task due to human error, and that I had written a script to do it for me. While I didn't think much of it, both my manager and one of the more senior technical leads were quite surprised by my initiative and seemed very content about the work I had done, even after I had explained many of the scripts limitations and drawbacks.
+<br/><br/>
+My manager suggested he was interested in continuing the development of the little project, and we agreed it would be best if both myself and Yehia, another coop from the team, recreated the script as a proper test suite together - and so we did.
+<br/><br/>
+Over the course of the next month and a half, Yehia and I worked many long days on producing a robust and flawless suite that would be adaptable to many different apps and would be compatible with any supported versions. We additionally removed the need for any overhead, by having the suite kick off another program that would fetch the log data, parse it and report it in real-time as the tests ran. By the end, we had a fully autonomous <i>Application Profiling</i> test suite with full documentation, such that anyone on any device could just kick it off and harvest results - many of which included load time for certain screens, data loader measurements, and app start times under <a href="https://developer.android.com/topic/performance/vitals/launch-time">hot and cold</a> start conditions. 
+<br/><br/>
+Overall, the final result was a huge success, with many people requesting additional features and functionality too. All the while, both Yehia and I continued to provide test results for new builds, never missing a release. The project is now a large component of the test automation team, and will have its features expanded by the next coop in 2019.
+
+
+<h2 id="Goals">Goals</h2>
+
+<h3 id="Learn_new_skill_sets">Learn new skill sets</h3>
+Challenging yourself on a technical front was always a goal I had looking forwards to coop in general. I had heard that test automation development was a very <a href="https://en.wikipedia.org/wiki/Jack_of_all_trades,_master_of_none">Jack of all Trades</a> position, so I was excited to learn about all the tools they used - with the personal goal of knowing how I could set up a testing infrastructure from scratch, on my own.
+
+Needless to say, I learned <i>a lot</i>. In my spare time I do a lot of development work, but I never really understood what was going on behind the scenes. <i>How does the buildbot know how to run my program?</i>, or <i>What is this "test coverage" sheet they keep talking about?</i> where always questions <i>I kind of</i> knew the answer to... but not really. Yet that wass only the surface; because after working this role at BlackBerry, not only did I acheive my goal, but I also learned so many more things relating to test automation as well. In order of what I find most significant to least, 
+<ul>
+  <li>Android Espresso</li>
+  <li>Ui Automator</li>
+  <li>Jenkins</li>
+  <li>Gradle tasks</li>
+  <li>Gerrit code reviews</li>
+</ul>
+
+as well as many general testing practices. I am now in a fairly confident place where I could set up and build testing infrastructure for any one of my projects that might need it next. Even during the semester, as I went along, I began to really feel more insight with all my other tools and understanding the checks they would perform after a successful compile and prior to a deployment for users to run.
+
+<h3 id="Performance">Performance</h3>
+When I first heard that BlackBerry had accepted me as a coop, I endured a giant rush of joy and relief. I was excited to go to Waterloo where many of my friends lived, excited to see the BlackBerry headquarters, and I was excited to think what my daily life routine might be. But then I had a thought - I realized it was one thing to get in and be accepted, but it was another to prove my worth.
+<br/><br/>
+I set out with a very straightforward goal, of <i>do well</i>, <i>impress my managers</i>, and <i>uphold the reputation of Guelph</i>. I had a lot of fears, worries and doubts, but I knew that I could do it if I just worked hard and continued to push myself. So long as I wasn't bored and was doing my best, it seemed like a plan that wouldn't fail. But how would I measure it? How would I know if I performed well? It seemed a bit difficult, so I broke it into two ways.
+<br/><br/>
+The first was to see how frequently I would receive good feedback on my work. For me it was a very passive way to determine how I was keeping up, and whether I was meeting or exceeding my manager's expectations. I often asked for feedback and made sure to genuinely adjust to it, and as the term went on I continued to improve on my performance and do a better job.
+<br/><br/> 
+The second, and the bigger measurement I strived for - was "Will my manager <i>ask me</i> to come back?". In my mind, if a coop does a good enough job to be welcomed back to the position, they must have had a strong performance. To achieve this, I continuously pushed myself and found more work. If my tasks for the sprint were complete, and all my tests were run, the last thing I would do is sit back and relax. I would seek out extra work from my manager, or if he was busy, I would find work on my own, whether it was improving something that I used regularly or even updating documentation on the wiki. Through this method I inadvertently started what would become my main project, and through this extra initiative I had earned what I had strived for; a personal invitation from my manager to come back next year.
+
+<h3 id="Identify_my_weaknesses">Identify my weaknesses</h3>
+I've always been a strong programmer, and that was never really my worry. I used to think my weakness was quickly learning the ropes of a large project, but looking back that isn't so much a weakness as something every programmer has to deal with throughout their career. The best way to really determine if I had a weakness would be to have an identifiable problem I can look at, and see what I can do to make it better.
+<br/><br/>
+And my manager, Patrick Lam, helped me do just that.
+<br/><br/>
+I never had an issue with my performance or the quality of my deliverables - but for some reason, my performance would slow down when I worked with a team. For the first month and entering the second, I blamed it on a lot of things. <i>"Ohh, these meetings are so useless.. I could have coded it by now"</i> or <i>"Oh come on, I can do his part better than he can"</i> were some of the excuses I always told myself. But the truth was, it was me. I simply didn't want to hear what other people had to say because <i>I</i> wasn't willing to accept I could be wrong.
+<br/><br/>
+I personally feel like it wasn't a conclusion that I was willing to accept, because in hindsight it seems to obvious. One individual in particular who really helped me see that way was a full-time employee, Chris, who worked on the development of productivity apps. We were talking about interviews, and he mentioned that he doesn't care if the candidate knows anything coming in, or if they can write fancy algorithms on a whiteboard - only if they're willing to accept other people and adopt to their different points of views. I jokingly replied that I would fail his interview, to which he replied "at least you realize that"... Which left me quite shocked in the moment, because it was entirely true. 
+<br/><br/>
+After some back and forth with my manager and some other coops who knew how I worked quite well, one of the things I began to heavily focus on was my teamwork and communication skills. I remember thinking it seemed silly at first, but it just seemed to make the days so much easier and the work so much less stressful - and over time, as reflected in my one-on-one meetings with my manager, I began to improve. Moving forward, and after my exit interview with my manager, I now realize that communication and teamwork are not just checkboxes that I have to check off; but they're actually things you have to work on as hard as anything else to do. They are key elements of a working environment that I know I need to improve, and so I now know they will be my future my goals of things I would like to do.
+
+<h2 id="Recommendations">Recommendations</h2>
+I found that I had a significant number of meetings - many of which I didn't need to be a part of, or of the 1-hour meeting only five minutes would be distantly relevant to anything I was doing. Between the test automation meetings and the CCNT test automation meetings, only one of the two were really necessary. For the greater team meeting, in which everyone under Jeremy's organization gives an update for what they've been doing that week, I feel like it could be better done in a mattermost channel instead. Overall, the time spent in meetings adds up substantially, and even when working through them it feels greatly unnecessary at times.
+<br/><br/>
+I also feel like the onboarding experience was a bit too much to absorb; while in hindsight it seems like a very fufilling way to bring the new hires to the team, it only seems that way since I now understand everything that was going on back then. At the time, I found it to be too much abstract information that wasn't sticking no matter how hard I tried to apply it. Each technical lead gave too little depth on too many subjects to follow along, and while it was far from a waste of time, it could have been better with some hands-on activities in the mix at a slightly slower pace, and with a bit less coverage.
+
+
+<h2 id="Conclusions">Conclusions</h2>
+The experience I had as a test automation development student at BlackBerry was fast paced, and at times very rewarding. It allowed me to learn tons of new testing and Android development tools, while ensuring I was never giving a task I couldn't complete. One of my favorite parts about the experience was just the time allocated to do my own thing, from trying new outreach on projects to working on something wildly different every month. My goals and expectations were met and my performance exceeded, and a bit takeaway is I now  know where I can focus for improvement in my future positions. 
+
+<h2 id="Acknowledgements">Acknowledgements</h2>
+I'd like to thank Patrick Lam for being honest with me about my mistakes, rather than attempting to avoid conflict. It allowed me to work on issues where I was struggling as quickly as possible, as well as maintain performance that was up to and beyond standards. I would also like to thank Yehia Habib, another coop on the test automation team for keeping me motivated and on track for projects that went into overtime and late into the night. It was certainly a experience, and would have been much more difficult without their help.
+<br/><br/>
+
+<h2 id="References">References</h2>
+<p id="cyberscoop"><a href="https://www.cyberscoop.com/inside-blackberrys-long-reinvention/">"BlackBerry says pivot to security is beginning to right the ship"</a>. CyberScoop. 2016-11-11. Retrieved 2019-01-02</p>
+<p id="nationalpost"><a href="https://nationalpost.com/news/canada/rim-co-ceos-resign-hand-to-job-to-insider">"RIM co-CEOs resign, hand to job to insider"</a>. National Post". 2012-01-23. Retrieved 2018-12-30</p>
+<p id="targetjobs"><a href="https://targetjobs.co.uk/careers-advice/job-descriptions/456237-test-automation-developer-job-description">"Test automation developer: job description"</a>. Targetjobs. 2017-04-23. Retrieved 2019-01-01</p>
+<br/><br/>
+<h2 id="Employer_eval">Employer Evaluation Form</h2>
+<a href="https://dginovker.github.io/files/Mr. Daniel Ginovker - Final Employer Evaluation.pdf">Final Employer Evaluation .pdf</a>
+<br/><br/>
+<h2 id="See_also">See Also</h2>
+Guidelines of the review can be seen <a href="https://www.recruitguelph.ca/cecs/computer-science-work-term-report-guidelines">here</a>.

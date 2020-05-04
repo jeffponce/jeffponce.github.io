@@ -1,0 +1,19 @@
+# main links links
+main:
+  - title: "CV"
+    url: http://dginovker.github.io/files/Resume.pdf
+
+  - title: "Projects"
+    url: /projects/
+        
+  - title: "Coops"
+    url: /coops/
+
+  - title: "GitHub"
+    url: https://github.com/dginovker
+
+  - title: "Law School"
+    url: /law-school/
+
+  - title: "Contact"
+    url: /contact/
