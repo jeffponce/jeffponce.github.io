@@ -1,19 +1,12 @@
-# main links links
+# main links
 main:
-  - title: "CV"
-    url: http://dginovker.github.io/files/Resume.pdf
-
-  - title: "Projects"
-    url: /projects/
-        
-  - title: "Coops"
-    url: /coops/
-
-  - title: "GitHub"
-    url: https://github.com/dginovker
-
-  - title: "Law School"
-    url: /law-school/
-
-  - title: "Contact"
-    url: /contact/
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
