@@ -1,3 +1,3 @@
-See website: https://dginovker.github.io/
+See website: 
 
-Inspiration: https://github.com/LantaoYu/lantaoyu.github.io
+Inspiration:
