@@ -2,10 +2,11 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Visualizations"
-    url: /visualizations/
   - title: "Machine Learning"
     url: /machine_learning/
+  - title: "Visualizations"
+    url: /visualizations/
+
 
 
   # - title: "About"
