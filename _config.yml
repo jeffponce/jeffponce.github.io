@@ -134,7 +134,6 @@ include:
   - _pages
   - files
   - _posts
-
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -160,7 +159,6 @@ exclude:
   - Rakefile
   - README
   - tmp
-  
 keep_files:
   - .git
   - .svn
@@ -275,4 +273,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
