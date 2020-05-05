@@ -5,7 +5,7 @@ main:
   - title: "Visualizations"
     url: /visualizations/
   - title: "Machine Learning"
-    url: /machine-learning/
+    url: /machine_learning/
 
 
   # - title: "About"
