@@ -22,8 +22,14 @@ ds1.head()
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc1.png)
 ![Non-profit2](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc2.png)
+Lookng at the data we can see most of the information is internal coding to other points of data. For example, Subsection, Affliation, etc. What we need is the basic information on each organization and the financials, *Income/Revenue/Assets*.
 
-
+First, we take a look at how they broke up the indivdual states.
+```python
+ds1.STATE.unique()# NorthEast Region of US - 8 States
+ds2.STATE.unique() # MidWest/MidAtlantic Region of US - 19 States
+ds3.STATE.unique() # SouthEast/Western Region of US - 24 States
+```
 
 ### H3 Heading
 
