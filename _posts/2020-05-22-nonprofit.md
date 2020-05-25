@@ -28,12 +28,25 @@ First, we take a look at how they broke up the indivdual states.
 ![Non-profit3](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc3.png)
 We could seperate the data to make them more like the US standard regions, but since we will seperate at the state level this will be fine for the time being.
 
+Below we are seperating the data into a new region variable for vizualiztion. Sorting thr data based on Income and only taking the Name, City, State, Asset, Income, and Revenue columns. Second line adds a new column for the Region. Giving us the Top 10 US Non-Profits based on Income per Region.
 
 ```python
-ds1.STATE.unique()# NorthEast Region of US - 8 States
-ds2.STATE.unique() # MidWest/MidAtlantic Region of US - 19 States
-ds3.STATE.unique() # SouthEast/Western Region of US - 24 States
+#NorthEast Region
+ne = ds1.sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+ne['Region'] = 'NorthEast'
+
+#MidWest Region
+mw = ds2.sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+mw['Region'] = 'MidWest/MidAtlantic'
+
+#SouthEast and Western Regions
+se = ds3.sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+se['Region'] = 'SouthEast/West'
 ```
+
 
 ### H3 Heading
 
