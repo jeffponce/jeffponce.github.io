@@ -75,7 +75,9 @@ a.set_ylabel('Income',fontsize=25)
 plt.show()
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
+**Conclusion:** First, we looked at Income since that would give us a true indicator of the "Profitablilty" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and running the Non-profit.
 
+### Data Cleaning Part II
 
 ### H3 Heading
 
