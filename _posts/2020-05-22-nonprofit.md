@@ -47,6 +47,7 @@ se = ds3.sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'A
 se['Region'] = 'SouthEast/West'
 ```
 With a merge and concatation, we get the resulting list below. 
+
 ```python
 merged_data = [ne, mw, se]
 results = pd.concat(merged_data)
@@ -54,6 +55,27 @@ print(results)
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc4.png)
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc5.png)
+
+### EDA Lite
+I wanted to answer a small question bugging me. Specfically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
+
+The code below plots a boxplot with the spread of the Top 30 Non-Profits in the US. 
+
+```python
+#Plot Style
+sns.set(style="darkgrid", palette="muted", color_codes=True)
+#Create BoxPlot and Add Points
+a = sns.boxplot(data = results, x = 'Region', y = 'INCOME_AMT')
+sns.stripplot(x='Region', y='INCOME_AMT', data=results, jitter=True, size=16, linewidth=0, hue = 'NAME', alpha=0.7)
+#Legend and Titles
+a.legend(bbox_to_anchor=(1.05, 1.0), loc=2, borderaxespad=0.1)
+a.axes.set_title('Top 10 US Non-Profits in 2017',fontsize=35)
+a.set_xlabel('Region',fontsize=25)
+a.set_ylabel('Income',fontsize=25)
+plt.show()
+```
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
+
 
 ### H3 Heading
 
