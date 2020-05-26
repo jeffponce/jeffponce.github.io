@@ -116,57 +116,22 @@ print(final_set)
 
 ## Exploratory Data Analysis (EDA)
 
+### Map of Average Income per State
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda2.png)
+Top 5 States:
+1.Massachusetts | $18.4B
+2.Oregon | $12.6B
+3.Illinois | $11.3B
+4.Washington | $10.0B
+5.Maryland | $8.6B
+### Top 10 Based on Income
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda3.png)
+
+### Top 10 Based on Revenue
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda4.png)
+
+### Top 10 Based on Assets
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda5.png)
 
 
 
-### H3 Heading
-
-Here's some text
-
-and here's some *itlaics*
-
-Here's **bold** text
-
-
-
-Here's a list:
-* First thing
-+ Second thing
-- Third thing
-
-Here's numbers:
-1. First
-2. Second
-3. Third
-
-Python Code Block:
-```Python
-    import numPY as np
-
-    def test_function(x,y):
-      z = np.sum(x,y)
-      return z
-```
-
-R Code Block:
-```r
-library(tidyverse)
-df <- read_csv("some_file.csv")
-head(df)
-```
-
-Here's some in line code `x+y`
-
-
-
-Here's another images KRAMDown
-
-Here's some math:
-
-$$z=x+y$$
-
-You can also put in it in line $$z=x+y$$
