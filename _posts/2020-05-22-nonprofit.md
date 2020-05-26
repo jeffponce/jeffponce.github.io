@@ -46,7 +46,14 @@ se = ds3.sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'A
                                                      'INCOME_AMT','REVENUE_AMT']].head(10)
 se['Region'] = 'SouthEast/West'
 ```
-
+With a merge and concatation, we get the resulting list below. 
+```python
+merged_data = [ne, mw, se]
+results = pd.concat(merged_data)
+print(results)
+```
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc4.png)
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc5.png)
 
 ### H3 Heading
 
