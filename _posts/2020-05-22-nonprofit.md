@@ -79,6 +79,42 @@ plt.show()
 First, we looked at Income since that would give us a true indicator of the "Profitablilty" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and running the Non-profit. Based on just looking at Income we see that more than likely the partitioning wasn't based on a financial reasoning. Although, the NorthEast holds the highest organization based on Income, Presidents and Fellows of Harvard College, the MidWest/MidAtlantic on average has a higher income with their orginzations. 
 
 ### Data Cleaning Part II
+Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
+
+My first instinct was to take my code from above and start creating new variables for each state, for each file, and merge/concat them into a new set. 
+```python
+ma = ds1[ds1.STATE == 'MA'].sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+ny = ds1[ds1.STATE == 'NY'].sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+nj = ds1[ds1.STATE == 'NJ'].sort_values('INCOME_AMT', ascending=False)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']].head(10)
+...
+merged_state_list = [ma,ny,nj,me,nh,vt,ct,ri,...]
+final_set = pd.concat(merged_state_list)
+```
+Two problems with this method. 
+1. This is very repetative and ineffecient way to run this code. In coding there is a principle called keeping your Code DRY, meaning, Don't Repeat Yourself. 
+2. We encounter issues with variables names like id, or, and in which have spefic functions in Python.
+
+Then it hit me like a brick wall...the **Groupby function**! Now below does everything that I did above but just in a better way.
+```python
+# Use the groupby function to exact the data giving us the top 10 from each state.
+new_ds1 = ds1.sort_values("INCOME_AMT", ascending=False).groupby("STATE").head(10)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']]
+new_ds2 = ds2.sort_values("INCOME_AMT", ascending=False).groupby("STATE").head(10)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']]
+new_ds3 = ds3.sort_values("INCOME_AMT", ascending=False).groupby("STATE").head(10)[['NAME', 'CITY', 'STATE', 'ASSET_AMT',
+                                                     'INCOME_AMT','REVENUE_AMT']]
+#Merge and Concat Data
+merged_state_list = [new_ds1, new_ds2, new_ds3]
+
+final_set = pd.concat(merged_state_list)
+print(final_set)
+```
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc6.png)
+
+## Exploratory Data Analysis (EDA)
 
 ### H3 Heading
 
