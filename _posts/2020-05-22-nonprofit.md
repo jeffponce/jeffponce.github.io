@@ -118,12 +118,12 @@ print(final_set)
 
 ### Map of Average Income per State
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda2.png)
-Top 5 States:
-1.Massachusetts  $18.4B
-2.Oregon  $12.6B
-3.Illinois  $11.3B
-4.Washington  $10.0B
-5.Maryland  $8.6B
+Top 5 States
+1. Massachusetts  $18.4B
+2. Oregon  $12.6B
+3. Illinois  $11.3B
+4. Washington  $10.0B
+5. Maryland  $8.6B
 ### Top 10 Based on Income
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda3.png)
 
