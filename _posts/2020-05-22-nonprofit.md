@@ -10,7 +10,9 @@ mathjax: "true"
 The goal of this project is to better understand US Non-profit organizations and how they perform when compared to each other on based on income, revenue, and assets. Furthermore, we will look at the Top 10 Non-profits in the regions and the Top 10 per state. The Dataset was obtained from Kaggle, which contains information on US Non-profits broken up into three regions. We will analysis the data, isolate the info needed, and export data to be visualized in Tableau. 
 
 Link to Dataset: [Non-Profit](https://www.kaggle.com/crawford/us-charities-and-nonprofits)
+
 Link to GitHub Repo: [GitHub](https://github.com/jeffponce/non-profit-analysis)
+
 Link to Tableau Visualizations: [Visualization](https://public.tableau.com/profile/jeff.ponce#!/vizhome/2017Non-ProfitAnalysis/Non-ProfitAnalysis)
 ## Data Cleaning
 First we import the data into Junpyer Notebooks and display the data to see what they provide.
