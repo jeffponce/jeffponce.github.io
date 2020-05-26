@@ -114,6 +114,8 @@ print(final_set)
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc6.png)
 
+## Exploratory Data Analysis (EDA)
+
 ### H3 Heading
 
 Here's some text
