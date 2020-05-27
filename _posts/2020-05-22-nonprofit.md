@@ -104,9 +104,10 @@ a.set_xlabel('Region',fontsize=25)
 a.set_ylabel('Income',fontsize=25)
 plt.show()
 ```
-![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda6.png)
 **Conclusion:** 
-First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. Based on just looking at Income we see that more than likely the partitioning was arbitrary. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their orginzations. Even with replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the MidWest/MidAtlantic region still holds the higher average. 
+First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their orginzations. When replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the Assets show a similiar spread to Income. The revenue has a tighter spread and making me think as this data was choosen to be seperated based on Revenue. See below
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
 
 ### Data Cleaning Part II
 Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
