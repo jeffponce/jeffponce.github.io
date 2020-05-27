@@ -83,11 +83,10 @@ print('DS1 has', count1, 'Organizations in the file.')
 print('DS2 has', count2, 'Organizations in the file.')
 print('DS3 has', count3, 'Organizations in the file.')
 ```
-We get:
-
-DS1 has 240579 Organizations in the file.
-DS2 has 619129 Organizations in the file.
-DS3 has 768922 Organizations in the file.
+We get:..
+DS1 has 240579 Organizations in the file..
+DS2 has 619129 Organizations in the file..
+DS3 has 768922 Organizations in the file..
 
 So as one would expect, the more States the more Non-profits in the file.
 
