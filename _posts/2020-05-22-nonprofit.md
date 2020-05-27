@@ -106,7 +106,8 @@ plt.show()
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
 **Conclusion:** 
-First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. Based on just looking at Income we see that more than likely the partitioning was arbitrary. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their orginzations. Even with replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the MidWest/MidAtlantic region still holds the higher average. 
+First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their orginzations. When replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the Assets show a similiar spread to Income. The revenue has a tighter spread and making me think as this data was choosen to be seperated based on Revenue. See below
+![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda6.png)
 
 ### Data Cleaning Part II
 Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
@@ -165,5 +166,5 @@ Top 5 States:
 ### Top 10 Based on Assets
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda5.png)
 
-
-
+## Final Thoughts
+I really appricate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
