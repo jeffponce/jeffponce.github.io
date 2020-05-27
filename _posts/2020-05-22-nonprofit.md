@@ -87,7 +87,6 @@ We get:
 DS1 has 240579 Organizations in the file.  
 DS2 has 619129 Organizations in the file.  
 DS3 has 768922 Organizations in the file.  
-
 So as one would expect, the more States the more Non-profits in the file.
 
 Next, the code below plots a boxplot with the spread of the Top 30 Non-Profits in the US based on Income. 
