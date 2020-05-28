@@ -15,7 +15,7 @@ Link to GitHub Repo: [GitHub](https://github.com/jeffponce/non-profit-analysis)
 
 Link to Tableau Visualizations: [Visualization](https://public.tableau.com/profile/jeff.ponce#!/vizhome/2017Non-ProfitAnalysis/Non-ProfitAnalysis)
 ## Data Cleaning
-First we import our libaries, like Pandas, NumPy, and Seaborn, with some other parameters. Next we import the data into Jupyter Notebooks and display the data to see what they provide.
+First we import our libraries, like Pandas, NumPy, and Seaborn, with some other parameters. Next we import the data into Jupyter Notebooks and display the data to see what they provide.
 ```python
 # Import Libaries and Parameters for Seaborn.
 import pandas as pd
@@ -36,13 +36,13 @@ ds1.head()
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc1.png)
 ![Non-profit2](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc2.png)
-Lookng at the data we can see most of the information is internal coding to other points of data. For example, Subsection, Affliation, etc. What we need is the basic information on each organization and the financials, *Income/Revenue/Assets*.
+Looking at the data we can see most of the information is internal coding to other points of data. For example, Subsection, Affiliation, etc. What we need is the basic information on each organization and the financials, *Income/Revenue/Assets*.
 
 First, we will check how the states are broken up in each file. 
 ![Non-profit3](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/dc3.png)
-We could change the data to make them more conform to the US standard regions, but since we will be seperating at the state level later this will be fine for the time being.
+We could change the data to make them more conform to the US standard regions, but since we will be separating at the state level later this will be fine for the time being.
 
-Below we are seperating the data into a new region variable for vizualiztion. The first line of code is sorting the data in decending order based on Income and only taking the Name, City, State, Asset, Income, and Revenue columns. Second line adds a new column for the Region. Giving us the Top 10 US Non-Profits based on Income per Region. Note again that these regions were created by the supplier of the data, the IRS.
+Below we are seperating the data into a new region variable for visualization. The first line of code is sorting the data in descending order based on Income and only taking the Name, City, State, Asset, Income, and Revenue columns. Second line adds a new column for the Region. Giving us the Top 10 US Non-Profits based on Income per Region. Note again that these regions were created by the supplier of the data, the IRS.
 
 ```python
 #NorthEast Region
@@ -73,7 +73,7 @@ print(results)
 ### EDA Lite
 I wanted to answer a small question bugging me first. Specfically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
 
-I thought first it could be based on the number of orginaztions in a giving State. So below,
+I thought first it could be based on the number of organizations in a giving State. So below,
 ```python
 # Count of Non-Profits in each File
 count1 = ds1.NAME.count()
@@ -106,11 +106,11 @@ plt.show()
 ```
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda1.png)
 **Conclusion:** 
-First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their orginzations. When replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the Assets show a similiar spread to Income. The revenue has a tighter spread and making me think as this data was choosen to be seperated based on Revenue. See below
+First, we looked at Income since that would be a true indicator of the "Profitability" of the organization. Some non-profits may take in a lot of donations, or revenue, but have to spend it on the goals and overhead to run the non-profit. The NorthEast region holds the highest organization based on Income, Presidents and Fellows of Harvard College, but the MidWest/MidAtlantic on average has a higher income with their organizations. When replacing ``y='INCOME_AMT'`` with the Revenue and Asset variables the Assets show a similar spread to Income. The revenue has a tighter spread and making me think as this data was chosen to be separated based on Revenue. See below
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda6.png)
 
 ### Data Cleaning Part II
-Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
+Now we will separate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
 
 My first instinct was to take my code from above and start creating new variables for each state, for each file, and merge/concat them into a new dataset. 
 ```python
@@ -167,5 +167,5 @@ Top 5 States:
 ![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda5.png)
 
 ## Final Thoughts
-I really appricate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
+I really appreciate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
 
