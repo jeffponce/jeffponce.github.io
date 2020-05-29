@@ -9,7 +9,7 @@ mathjax: "true"
 # Project Overview
 The goal of this project is to show my process in preforming ETL on a new dataset and how to find errors we would want to remove before preforming any analysis. The dataset was part of a challenge through SuperDataScience, a platform that teaches data science. In this process we will be using a combination of NotePad++, Excel, SSIS, and SQL to try to find errors in the data that would skew the analysis. Note on Macs the process would be slightly different, NotePad++, SSIS, and SQL are only program that run on Windows. There other solutions like Atom/Brackets as your text editor and PostgreSQL for SQL. I may choose to run this process on Mac in another post since I also do work on my MacBook Pro.
 
-The dataset is just over 1.05M rows and has 5 errors that we need to try to find. Below is the only info we were given in the challenge.  
+The dataset is just over 1.05M rows and has 5 errors that we need to try to find. Below is the only info we were given in the challenge.
 1. The CustomerID field does not contain duplicate records.
 2. You know that the total projected revenue for 2016 equals: $419,896,187.87.
 
