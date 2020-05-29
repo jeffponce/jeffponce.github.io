@@ -20,9 +20,11 @@ Link to Tableau Visualizations: [Visualization]()
 ## Part I: NotePad++ & Excel
 Now to start, the most important thing is to track as much as possible the changes to the data from the original data and keep a copy of the original data always unchanged. This allows us to have options in case we make any mistakes. In my GitHub Repo there is break down of the way I format the folders. I make a copy of the original data and move it to the prepared data folder to work on. 
 
-Now opening the data in NotePad++..
+Now opening the data in NotePad++ 
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl.PNG)
 
+We see that this is a dataset from a car sevice company. We have three columns, CustomerID, CustomerSince, and Car, that describes the customer and the car serviced while the other three are what each customer spent that year. 
 ## Part II: SSIS
 I wanted to answer a small question bugging me first. Specifically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
 
