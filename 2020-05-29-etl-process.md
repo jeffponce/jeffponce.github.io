@@ -18,7 +18,10 @@ Link to GitHub Repo: [GitHub]()
 Link to Tableau Visualizations: [Visualization]()
 
 ## Part I: NotePad++ & Excel
-First we import our libaries, like Pandas, NumPy, and Seaborn, with some other parameters. Next we import the data into Jupyter Notebooks and display the data to see what they provide.
+Now to start, the most important thing is to track as much as possible the changes to the data from the original data and keep a copy of the original data always unchanged. This allows us to have options in case we make any mistakes. In my GitHub Repo there is break down of the way I format the folders. I make a copy of the original data and move it to the prepared data folder to work on. 
+
+Now opening the data in NotePad++..
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl.PNG)
 
 ## Part II: SSIS
 I wanted to answer a small question bugging me first. Specifically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
