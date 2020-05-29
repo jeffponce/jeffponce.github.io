@@ -24,7 +24,11 @@ Now opening the data in NotePad++
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl.PNG)
 
-We see that this is a dataset from a car sevice company. We have three columns, CustomerID, CustomerSince, and Car, that describes the customer and the car serviced while the other three are what each customer spent that year. 
+We see that this is a dataset from a car sevice company. We have three columns, CustomerID, CustomerSince, and Car, that describes the customer and the car serviced while the other three are what each customer spent that year. Below we see that we have 1.05M rows which due to excels limitation, second image, we will need to spilt the data and combine them after we load it into Excel.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl1.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl2.PNG)
+
 ## Part II: SSIS
 I wanted to answer a small question bugging me first. Specifically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
 
