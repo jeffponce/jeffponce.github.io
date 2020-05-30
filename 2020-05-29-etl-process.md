@@ -37,12 +37,15 @@ In NotePad++ we use `CRTL-G` to go to row 1M and cut everything to the bottom. S
 Now we move on to Excel. We open our files in an empty Excel sheet to it goes through the Text Import Wizard.
 
 Here we want to put it as delimited, click next.
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl5.PNG)
 
 Here we uncheck Tab and check Semicolon as your delimiter. Why it's important to know get to know the file before loading.
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl6.PNG)
 
 Here we highlight all the columns and switch everything to text. Click Finish.
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl7.PNG)
 
 Now that we have the data loaded. We will make sure all the columns are formated properly, first with the dates. Although already in YYYY-MM-DD format we want to make sure nothing changes when we export the data in a csv file. Using Text to Column in the Data tab below are what we need to do.
@@ -58,7 +61,7 @@ With that the file is ready to be exported as a csv file. We will down the same 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl15.PNG)
 
-
+We will take this file and load it up in SSIS next to start checking for any errors in the data. The reason we format it in Excel first is when we load into SSIS, Excel would have created a new column if there was any issue with a delimiter or a typo in any row. There are other ways to check for this but this has worked for me well. (In the few project ive done with uncleaned data)
 
 ## Part II: SSIS
 I wanted to answer a small question bugging me first. Specifically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
