@@ -143,10 +143,75 @@ Using the Bad Record file we can check which row had the error. Going back to th
 
 
 ## Part III: MS SQL
-Now we will move over to Microsoft SQL Server, load up our DSTRAINING database, and check if our RAW table was created from SSIS. As we can see, it was completed correctly. 
+Now we will move over to Microsoft SQL Server Management Studio, open up our database, and check if our RAW table was created from SSIS. As we can see, it was completed correctly. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl36.PNG)
 
+Below is the Stored Procedure Template that I use to convert a RAW table 
+
+```SQL
+USE [DSTRAINING]
+GO
+/****** Object:  StoredProcedure [dbo].[__tmp1__BLD_WRK_TableName]    Script Date: 5/28/2020 8:22:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[__tmp1__BLD_WRK_TableName]
+-- =============================================
+-- Author:	
+-- Create date: 
+-- Description:	RAW to WRK Table
+-- Modified Date: 
+-- =============================================
+AS
+BEGIN
+-- =============================================
+-- Drop Table
+-- =============================================
+IF OBJECT_ID('WRK_TableName') IS NOT NULL
+DROP TABLE [WRK_TableName]
+
+-- =============================================
+-- Create Table
+-- =============================================
+CREATE TABLE [WRK_TableName] 
+(
+	[RowNumber]		INT IDENTITY(1,1)
+	,[AAA]			VARCHAR(100)
+	,[BBB]			VARCHAR(1000)
+	,[CCC]			DATE
+	,[DDD]			INT
+	,[EEE]			FLOAT
+)
+
+-- =============================================
+-- TRUNCATE Table
+-- =============================================
+TRUNCATE TABLE [WRK_TableName]
+
+-- =============================================
+-- INSERT INTO
+-- =============================================
+INSERT INTO [WRK_TableName]
+(
+	[AAA]			
+	,[BBB]			
+	,[CCC]			
+	,[DDD]			
+	,[EEE]
+)
+SELECT
+	[xAAA]
+	,[xBBB]
+	,CONVERT(DATE, [xZZZ],20)
+	,CAST([xWWW] AS INT)
+	,CAST([xVVV] AS FLOAT)
+FROM [RAW_TableName]
+--(x row(s) affected)
+
+END
+```
 
 ## Exploratory Data Analysis (EDA)
 
