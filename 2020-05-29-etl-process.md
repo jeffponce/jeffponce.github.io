@@ -64,7 +64,22 @@ With that the file is ready to be exported as a csv file. We will down the same 
 We will take this file and load it up in SSIS next to start checking for any errors in the data. The reason we format it in Excel first is when we load into SSIS, Excel would have created a new column if there was any issue with a delimiter or a typo in any row. There are other ways to check for this but this has worked for me well. (In the few project ive done with uncleaned data)
 
 ## Part II: SSIS
-I wanted to answer a small question bugging me first. Specifically on why they decided to seperate the files based on the states they used. For example, why only put 8 states in eo1.csv and why 24 states in eo3.csv? Could it be based on some metric? Let's find out.
+SSIS is a ETL tool that allows us to find and errors in the dataset. SSIS its self is very versitile and can be used for a lot more than what we will be using it for, but it is very powerful.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl16.PNG)
+
+We start by starting a New Project and choosing the Interation Services under the Business Intellegence section. Give it name such as Car Sevice and click `OK`.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl17.PNG)
+
+When it loads up we will be in the Control Flow tab on the top. We will need to drag out a Data Flow Task into the Control Flow window. Give it name similiar to the project name, you can also give it the date. Clikc on the Data Flow tab and now we are on the main page where we will be performing our ETL.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl18.PNG)
+
+We will need to drag out a Flat File Source from Other Sources in the SSIS toolbox on the left. This is how we will be loading the data into SSIS. Next we, in this situation, will drag out the OLE DB Destination which will load the "cleaned" data in MicroSoft SQL. If you wanted to a csv file, you can use the Flat File Destination to create that file. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl19.PNG)
+
 
 ## Part III: MS SQL
 Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
