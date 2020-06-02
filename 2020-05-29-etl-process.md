@@ -97,6 +97,49 @@ Now Flat File Source no longer has a Red X on it so we're clear to move forward.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl23.PNG)
 
+We will take a Conditional Split from SSIS Toolbox and a Flat File Distrination for location to place any error records we find using the conditonal split. We format the split first.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl24.PNG)
+
+Here in the Conditional Split we will need to logically test how to ID row shift. We name the Output Name `Bad Records` and in the condition we will use `LEN([Column 6]) > 0` to check the length of all the rows in Column 6, since we shouldnt anything in this column anything but zero is an error. Using the logical or, `||` we will also check for any row shifts to left or in Column 2016E. Here we will use `LEN([2016E]) == 0` to check if we have any empty cells that column. Remember to name the Default Putput Name to `Good Records`. Click OK and we're done here. Note: If we have any important data that is essential, we would use this same method to make sure it was included in the data.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl25.PNG)
+
+Setting up the Flat File Destination is simliar as before. Click Browse, then here we will create a text File `2020_05_08_BadRecords` in a folder for Removed Rows to account for any changes. This file will be where SSIS puts any error rows we find. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl27.PNG)
+
+With these all set up, we will dray the blue arrown from the Flat File Source to the Conditional Split. Next we take the Blue Arrow in Conditional split and drag it tpwards the Flat File Distination, choosing Bad Records as the Output. When we drag the again from Conditonal Split to the OLE DB Distination, it will automatically set it to Good Records.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl28.PNG)
+
+Now we will set up the working table in MS SQL by setting up your Database and then clicking New to open a SQL scripted used to create the table. We add `[RowNumber] int indentity(1,1)` to add a new column to track row numbers and change the table name to `RAW_CarService`.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl29.PNG)
+
+Note: Sometimes we have issues when setting up the SQL database. To fix this we go into the OLE DB Destination and on the right we switch the AlwaysUseDefault parameter to `True`.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl30.PNG)
+
+Once everything is set we press Execution Results button on the top right to start the ETL process. We should see something similiar to the below. This could take some time to run as it is over 1M rows.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl31.PNG)
+
+After it finishes we should see something similier to the below. We've found 1 Bad Record and loaded into the Text file we set up. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl32.PNG)
+
+Before we check it in NotePad++ we will go back to the Control Flow tab and right click the Dats Flow Task and disable it.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl33.PNG)
+
+### First Error
+Using the Bad Record file we can check which row had the error. Going back to the orginal data we see that the row shift was due to the extra ; in between 118 and 01 making it two seperate numbers. There must have been a error in loading the data that caused it to add the semicolon.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl34.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl35.PNG)
+
+
 
 
 ## Part III: MS SQL
