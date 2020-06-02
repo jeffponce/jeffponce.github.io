@@ -147,7 +147,7 @@ Now we will move over to Microsoft SQL Server Management Studio, open up our dat
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl36.PNG)
 
-Below is the Stored Procedure Template that I use to convert a RAW table 
+Below is the Stored Procedure template that we will use to convert a RAW table that we created using SSIS. This also allows us to have a record of how we converted the tables. 
 
 ```SQL
 USE [DSTRAINING]
@@ -204,14 +204,14 @@ INSERT INTO [WRK_TableName]
 SELECT
 	[xAAA]
 	,[xBBB]
-	,CONVERT(DATE, [xZZZ],20)
-	,CAST([xWWW] AS INT)
-	,CAST([xVVV] AS FLOAT)
 FROM [RAW_TableName]
 --(x row(s) affected)
 
 END
 ```
+Below we replaced the `TableName`, add our author info, and start the process of creating the shell of the WRK table. In the Create Table section we will add the Column names and the column data type. `VARCHAR` for text, `DATE` for the dates, and `float` for the year's sales numbers. Note that in the far right window we are performing a test to check that we have an empty column for Column 6.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl38.PNG)
 
 ## Exploratory Data Analysis (EDA)
 
