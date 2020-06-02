@@ -18,6 +18,7 @@ Link to GitHub Repo: [GitHub]()
 
 Link to Tableau Visualizations: [Visualization]()
 
+
 ## Part I: NotePad++ & Excel
 Now to start, the most important thing is to track as much as possible the changes to the data from the original data and keep a copy of the original data always unchanged. This allows us to have options in case we make any mistakes. In my GitHub Repo there is break down of the way I format the folders. I make a copy of the original data and move it to the prepared data folder to work on. 
 
@@ -63,6 +64,7 @@ With that the file is ready to be exported as a csv file. We will down the same 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl15.PNG)
 
 We will take this file and load it up in SSIS next to start checking for any errors in the data. The reason we format it in Excel first is when we load into SSIS, Excel would have created a new column if there was any issue with a delimiter or a typo in any row. There are other ways to check for this but this has worked for me well. (In the few project ive done with uncleaned data)
+
 
 ## Part II: SSIS
 SSIS is a ETL tool that allows us to find and errors in the dataset. SSIS its self is very versitile and can be used for a lot more than what we will be using it for, but it is very powerful.
@@ -140,10 +142,11 @@ Using the Bad Record file we can check which row had the error. Going back to th
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl35.PNG)
 
 
-
-
 ## Part III: MS SQL
-Now we will seperate the Top 10 Non-Profits per State based on Income, merge them, and export the new dataset for further EDA in Tableau.
+Now we will move over to Microsoft SQL Server, load up our DSTRAINING database, and check if our RAW table was created from SSIS. As we can see, it was completed correctly. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl36.PNG)
+
 
 ## Exploratory Data Analysis (EDA)
 
