@@ -209,9 +209,45 @@ FROM [RAW_TableName]
 
 END
 ```
-Below we replaced the `TableName`, add our author info, and start the process of creating the shell of the WRK table. In the Create Table section we will add the Column names and the column data type. `VARCHAR` for text, `DATE` for the dates, and `float` for the year's sales numbers. Note that in the far right window we are performing a test to check that we have an empty column for Column 6.
+Below we replaced the `TableName`, add our author info, and start the process of creating the shell of the WRK table. In the `CREATE TABLE` section we will add the Column names and the column data type. `VARCHAR` for text, `DATE` for the dates, and `float` for the year's sales numbers. Note that in the far right window we are performing a test to check that we have an empty column for `[Column 6]`. Beautiful, moving forward.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl38.PNG)
+
+Here we will use `INSERT INTO` to move the data in the RAW table to the newly made WRK table. Since we set up the data types in the `CREATE TABLE` section through implicit conversion we will not need to add them here. Run the code and we get our second error.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl39.PNG)
+
+### Second Error
+Here we got the error message `Error converting data type varchar to float.` This is the benefit of starting with a RAW table and converting into a WRK. Because of the implicit conversion, if we try to add data that doesnt conform to the data type we selected it will give us an error. Since the error was for the Floats we only have to check the 2014, 2015, and 2016E columns. 
+
+Below we start by opening a new query window and trying to find the error at each column. The first part of the SQL code below is checking that all the data in Column 2014 is a number,`isnumeric()`, if it's false we get a 0 meaning there's a string somewhere. The second portion filters the rows that have empty cell since those wouldn't be real errors.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl40.PNG)
+
+Checking 2015 column we see the error. Somehow when the original data was created there was an `$` entered instead of a `.` for the sales number. Checking column 2016E we see this is the only error. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl41.PNG)
+
+We will fix this issue by excluding this whole row from being inserted into the new WRK table. We do this by added a WHERE condition to the end of the `INSERT INTO` section. By flipping the logic from our test code we will exclude this row.
+
+```SQL
+)
+SELECT
+	[CustomerID]
+	,[CustomerSince]
+	,[Vehicle]
+	,[2014]
+	,[2015]
+	,[2016E]
+FROM [RAW_CarService_20200529]
+---EXCLUSION
+WHERE ISNUMERIC([2015])	= 1
+OR [2015] = ''
+--(1409998 row(s) affected)
+```
+## Part IV: MS SQL Continued
+
+
 
 ## Exploratory Data Analysis (EDA)
 
