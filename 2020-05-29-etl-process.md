@@ -12,6 +12,7 @@ The goal of this project is to show my process in preforming ETL on a new datase
 The dataset is just over 1.05M rows and has 5 errors that we need to try to find. Below is the only info we were given in the challenge.
 1. The CustomerID field does not contain duplicate records.
 2. You know that the total projected revenue for 2016 equals: $419,896,187.87.
+3. Give a small explantion to how the error might of occured.
 
 Link to GitHub Repo: [GitHub]()
 
@@ -79,6 +80,23 @@ When it loads up we will be in the Control Flow tab on the top. We will need to 
 We will need to drag out a Flat File Source from Other Sources in the SSIS toolbox on the left. This is how we will be loading the data into SSIS. Next we, in this situation, will drag out the OLE DB Destination which will load the "cleaned" data in MicroSoft SQL. If you wanted to a csv file, you can use the Flat File Destination to create that file. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl19.PNG)
+
+Double-click on the Flat File Source and then click on Browse.. to find your `..Combined` file to load up. Change the text delimiter to double quotes("). Next check the columns.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl20.PNG)
+
+Below we see why it was important to take the data and load it into Excel. Although tedious to most, it allows us to identitfy any row shift from errors in the data. Excel helps us ID them by creating this new `Column 6` and when we load into SSIS, SSIS will also ID it as a column. We've found our first error and next we will find the way to exact it from over 1M rows. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl21.PNG)
+
+Continuing, in the Advance section we will highlight all the Columns and adjust the OutputColumnWidth to something wont truncate your data and give you errors. 1000 in this situation should be just fine, click OK to finish.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl22.PNG)
+
+Now Flat File Source no longer has a Red X on it so we're clear to move forward.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl23.PNG)
+
 
 
 ## Part III: MS SQL
