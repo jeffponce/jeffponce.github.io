@@ -251,6 +251,7 @@ Next we can check for any date errors. We do this by thinking a little bit about
 
 ### Third Error
 This one seems to be a typo error as well, meaning to enter 1999 instead of 1899. Unless this company was servicing horse and buggy!?!
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl44.PNG)
 
 Next lets check if we truly have unique numbers for CustomerID. We do this by using the `COUNT()` function to create a new column counting the number of CustomerID grouping by CustomerID and only pulling the rows where `COUNT` is greater than 1 so any duplicates. 
