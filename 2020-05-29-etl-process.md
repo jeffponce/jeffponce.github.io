@@ -220,7 +220,7 @@ Here we will use `INSERT INTO` to move the data in the RAW table to the newly ma
 ### Second Error
 Here we got the error message `Error converting data type varchar to float.` This is the benefit of starting with a RAW table and converting into a WRK. Because of the implicit conversion, if we try to add data that doesnt conform to the data type we selected it will give us an error. Since the error was for the Floats we only have to check the 2014, 2015, and 2016E columns. 
 
-Below we start by opening a new query window and trying to find the error at each column. The first part of the SQL code below is checking that all the data in Column 2014 is a number,`isnumeric()`, if it's false we get a 0 meaning there's a string somewhere. The second portion filters the rows that have empty cell since those wouldn't be real errors.
+Below we start by opening a new query window and trying to find the error at each column. The first part of the SQL code below is checking that all the data in Column 2014 is a number,`isnumeric()`, if it's false we get a 0 meaning there's a string somewhere. The second portion filters the rows that have empty cell since those wouldn't be real errors.  
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl40.PNG)
 
