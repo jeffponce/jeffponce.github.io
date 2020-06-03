@@ -260,12 +260,13 @@ Next lets check if we truly have unique numbers for CustomerID. We do this by us
 ### Fourth Error
 Here we see that we have 2 duplicate CustomerID. Taking it further, we can use the CustomerID `3490750` to check what happpened at these rows. As we can see, there was an error in creating the CustomerID as the rest of the data seems to indicate two seperate customers.
 
-![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl43.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/ETL43.PNG)
 
 ### Fifth Error
 For the last error we did a couple different check. I looked at average, min, and max for the sales columns. We find our final problem by seeing that most of the column averages were around 300 and 2015/2016E maxes were in the similiar 300-400 range. 2014 max however has a max of 2000 which is a major outlier in this dataset. 
 
-![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl45.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/ETL45.PNG)
+
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/INFO.PNG)
 
 
