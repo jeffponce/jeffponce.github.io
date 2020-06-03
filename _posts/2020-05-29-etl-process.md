@@ -1,7 +1,7 @@
 ---
 title: "ETL Process and Challenge"
 date: 2020-05-29
-tags: [Data Science]
+tags: 
 excerpt: "Data Cleaning & ETL"
 mathjax: "true"
 ---
