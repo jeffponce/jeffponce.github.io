@@ -228,9 +228,10 @@ Checking 2015 column we see the error. Somehow when the original data was create
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl41.PNG)
 
-We will fix this issue by excluding this whole row from being inserted into the new WRK table. We do this by added a WHERE condition to the end of the `INSERT INTO` section. By flipping the logic from our test code we will exclude this row.
+We will fix this issue by excluding this whole row from being inserted into the new WRK table. We do this by added a `WHERE` condition to the end of the `INSERT INTO` section. By flipping the logic from our test code we will exclude this row.
 
 ```SQL
+...
 )
 SELECT
 	[CustomerID]
@@ -246,10 +247,33 @@ OR [2015] = ''
 --(1409998 row(s) affected)
 ```
 ## Part IV: MS SQL Continued
+Next we can check for any date errors. We do this by thinking a little bit about the business. How old do you think this company would hold on to it's records? How old could this company be? Older than 50, 60 years? These are just things we may have to check. I'm making an assumption that this company can't have data older than 1965. Second portion of the code checks that there arent date issues for the future, in this case past 2016. Here we see our 3rd Error
+
+### Third Error
+This one seems to be a typo error as well, meaning to enter 1999 instead of 1899. Unless this company was servicing horse and buggy!?!
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl44.PNG)
+
+Next lets check if we truly have unique numbers for CustomerID. We do this by using the `COUNT()` function to create a new column counting the number of CustomerID grouping by CustomerID and only pulling the rows where `COUNT` is greater than 1 so any duplicates. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl42.PNG)
+
+### Fourth Error
+Here we see that we have 2 duplicate CustomerID. Taking it further, we can use the CustomerID `3490750` to check what happpened at these rows. As we can see, there was an error in creating the CustomerID as the rest of the data seems to indicate two seperate customers.
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl43.PNG)
+
+### Fifth Error
+For the last error we did a couple different check. I looked at average, min, and max for the sales columns. We find our final problem by seeing that most of the column averages were around 300 and 2015/2016E maxes were in the similiar 300-400 range. 2014 max however has a max of 2000 which is a major outlier in this dataset. 
+
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl45.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/INFO.PNG)
 
 
+Finally we will preform the final sum check. Adding up all the 2016E and making sure it match what we recieved in the begining of this challege. In order to do so we will gather the excluded rows and get the current total of the 2016E from SQL. Using Excel to see if everything adds up and does!
 
-## Exploratory Data Analysis (EDA)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl46.PNG)
+![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl47.PNG)
+
 
 ## Final Thoughts
 I really appricate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
