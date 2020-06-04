@@ -7,12 +7,12 @@ mathjax: "true"
 ---
 
 # Project Overview
-The goal of this project is to show my process in preforming ETL on a new dataset and how to find errors we would want to remove before preforming any analysis. The dataset was part of a challenge through SuperDataScience, a platform that teaches data science. In this process we will be using a combination of NotePad++, Excel, SSIS, and SQL to try to find errors in the data that would skew the analysis. Note on Macs the process would be slightly different, NotePad++, SSIS, and SQL are only program that run on Windows. There other solutions like Atom/Brackets as your text editor and PostgreSQL for SQL. I may choose to run this process on Mac in another post since I also do work on my MacBook Pro.
+The goal of this project is to show my process in preforming ETL on a new dataset and how to find errors we would want to remove before preforming any analysis. The dataset was part of a challenge through SuperDataScience, a platform that teaches data science. In this process we will be using a combination of NotePad++, Excel, SSIS, and SQL to try to find errors in the data that would skew the analysis. Note on Macs the process would be slightly different, NotePad++, SSIS, and SQL are only program that run on Windows. There are other solutions like Atom/Brackets as your text editor and PostgreSQL for SQL. I may choose to run this process on Mac in another post since I also do work on my MacBook Pro.
 
 The dataset is just over 1.05M rows and has 5 errors that we need to try to find. Below is the only info we were given in the challenge.
 1. The CustomerID field does not contain duplicate records.
 2. You know that the total projected revenue for 2016 equals: $419,896,187.87.
-3. Give a small explantion to how the error might of occured.
+3. Give a small explanation to how the error might of occurred.
 
 Link to GitHub Repo: [GitHub]()
 
@@ -26,12 +26,12 @@ Now opening the data in NotePad++
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl.PNG)
 
-We see that this is a dataset from a car sevice company. We have three columns, CustomerID, CustomerSince, and Car, that describes the customer and the car serviced while the other three are what each customer spent that year. Below we see that we have 1.05M rows which due to excels limitation, second image, we will need to spilt the data and combine them after we load it into Excel. Also note that this is a semicolon seperated file which is important when loading into Excel.
+We see that this is a dataset from a car service company. We have three columns, CustomerID, CustomerSince, and Car, that describes the customer and the car serviced while the other three are what each customer spent that year. Below we see that we have 1.05M rows which due to excels limitation, second image, we will need to spilt the data and combine them after we load it into Excel. Also note that this is a semicolon separated file which is important when loading into Excel.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl1.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl2.PNG)
 
-In NotePad++ we use `CRTL-G` to go to row 1M and cut everything to the bottom. Save this file as `..copy1` and create a new file with the remaining rows and name it `..copy2`. Now we preform a test to see that the begining of `..copy2` is the end of `..copy1`. As CustomerID is usually a unique number, will verify this later, we can see that we are good and didnt accedentily delete something.
+In NotePad++ we use `CRTL-G` to go to row 1M and cut everything to the bottom. Save this file as `..copy1` and create a new file with the remaining rows and name it `..copy2`. Now we preform a test to see that the beginning of `..copy2` is the end of `..copy1`. As CustomerID is usually a unique number, will verify this later, we can see that we are good and didn't accidentally delete something.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl3.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl4.PNG)
@@ -55,7 +55,7 @@ Now that we have the data loaded. We will make sure all the columns are formated
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl8.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl9.PNG)
 
-Next we will work on the sales columns. Similiar process Text to Column, convert to number, and fix the first row as text since this is the Year. 
+Next we will work on the sales columns. Similar process Text to Column, convert to number, and fix the first row as text since this is the Year. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl13.PNG)
 
@@ -67,15 +67,15 @@ We will take this file and load it up in SSIS next to start checking for any err
 
 
 ## Part II: SSIS
-SSIS is a ETL tool that allows us to find and errors in the dataset. SSIS its self is very versitile and can be used for a lot more than what we will be using it for, but it is very powerful.
+SSIS is a ETL tool that allows us to find and errors in the dataset. SSIS its self is very versatile and can be used for a lot more than what we will be using it for, but it is very powerful.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl16.PNG)
 
-We start by starting a New Project and choosing the Interation Services under the Business Intellegence section. Give it name such as Car Sevice and click `OK`.
+We start by starting a New Project and choosing the Integration Services under the Business Intelligence section. Give it name such as Car Service and click `OK`.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl17.PNG)
 
-When it loads up we will be in the Control Flow tab on the top. We will need to drag out a Data Flow Task into the Control Flow window. Give it name similiar to the project name, you can also give it the date. Clikc on the Data Flow tab and now we are on the main page where we will be performing our ETL.
+When it loads up we will be in the Control Flow tab on the top. We will need to drag out a Data Flow Task into the Control Flow window. Give it name similar to the project name, you can also give it the date. Click on the Data Flow tab and now we are on the main page where we will be performing our ETL.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl18.PNG)
 
@@ -87,7 +87,7 @@ Double-click on the Flat File Source and then click on Browse.. to find your `..
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl20.PNG)
 
-Below we see why it was important to take the data and load it into Excel. Although tedious to most, it allows us to identitfy any row shift from errors in the data. Excel helps us ID them by creating this new `Column 6` and when we load into SSIS, SSIS will also ID it as a column. We've found our first error and next we will find the way to exact it from over 1M rows. 
+Below we see why it was important to take the data and load it into Excel. Although tedious to most, it allows us to identify any row shift from errors in the data. Excel helps us ID them by creating this new `Column 6` and when we load into SSIS, SSIS will also ID it as a column. We've found our first error and next we will find the way to exact it from over 1M rows. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl21.PNG)
 
@@ -99,23 +99,23 @@ Now Flat File Source no longer has a Red X on it so we're clear to move forward.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl23.PNG)
 
-We will take a Conditional Split from SSIS Toolbox and a Flat File Distrination for location to place any error records we find using the conditonal split. We format the split first.
+We will take a Conditional Split from SSIS Toolbox and a Flat File Destination for location to place any error records we find using the Conditional Split. We format the split first.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl24.PNG)
 
-Here in the Conditional Split we will need to logically test how to ID row shift. We name the Output Name `Bad Records` and in the condition we will use `LEN([Column 6]) > 0` to check the length of all the rows in Column 6, since we shouldnt anything in this column anything but zero is an error. Using the logical or, `||` we will also check for any row shifts to left or in Column 2016E. Here we will use `LEN([2016E]) == 0` to check if we have any empty cells that column. Remember to name the Default Putput Name to `Good Records`. Click OK and we're done here. Note: If we have any important data that is essential, we would use this same method to make sure it was included in the data.
+Here in the Conditional Split we will need to logically test how to ID row shift. We name the Output Name `Bad Records` and in the condition we will use `LEN([Column 6]) > 0` to check the length of all the rows in Column 6, since we shouldn't anything in this column anything but zero is an error. Using the logical or, `||` we will also check for any row shifts to left or in Column 2016E. Here we will use `LEN([2016E]) == 0` to check if we have any empty cells that column. Remember to name the Default Output Name to `Good Records`. Click OK and we're done here. Note: If we have any important data that is essential, we would use this same method to make sure it was included in the data.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl25.PNG)
 
-Setting up the Flat File Destination is simliar as before. Click Browse, then here we will create a text File `2020_05_08_BadRecords` in a folder for Removed Rows to account for any changes. This file will be where SSIS puts any error rows we find. 
+Setting up the Flat File Destination is similar as before. Click Browse, then here we will create a text File `2020_05_08_BadRecords` in a folder for Removed Rows to account for any changes. This file will be where SSIS puts any error rows we find. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl27.PNG)
 
-With these all set up, we will dray the blue arrown from the Flat File Source to the Conditional Split. Next we take the Blue Arrow in Conditional split and drag it tpwards the Flat File Distination, choosing Bad Records as the Output. When we drag the again from Conditonal Split to the OLE DB Distination, it will automatically set it to Good Records.
+With these all set up, we will draw the blue arrow from the Flat File Source to the Conditional Split. Next we take the Blue Arrow in Conditional split and drag it towards the Flat File Destination, choosing Bad Records as the Output. When we drag the again from Conditional Split to the OLE DB Destination, it will automatically set it to Good Records.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl28.PNG)
 
-Now we will set up the working table in MS SQL by setting up your Database and then clicking New to open a SQL scripted used to create the table. We add `[RowNumber] int indentity(1,1)` to add a new column to track row numbers and change the table name to `RAW_CarService`.
+Now we will set up the working table in MS SQL by setting up your Database and then clicking New to open a SQL scripted used to create the table. We add `[RowNumber] int identity(1,1)` to add a new column to track row numbers and change the table name to `RAW_CarService`.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl29.PNG)
 
@@ -123,20 +123,20 @@ Note: Sometimes we have issues when setting up the SQL database. To fix this we 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl30.PNG)
 
-Once everything is set we press Execution Results button on the top right to start the ETL process. We should see something similiar to the below. This could take some time to run as it is over 1M rows.
+Once everything is set we press Execution Results button on the top right to start the ETL process. We should see something similar to the below. This could take some time to run as it is over 1M rows.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl31.PNG)
 
-After it finishes we should see something similier to the below. We've found 1 Bad Record and loaded into the Text file we set up. 
+After it finishes we should see something similar to the below. We've found 1 Bad Record and loaded into the Text file we set up. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl32.PNG)
 
-Before we check it in NotePad++ we will go back to the Control Flow tab and right click the Dats Flow Task and disable it.
+Before we check it in NotePad++ we will go back to the Control Flow tab and right click the Data Flow Task and disable it.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl33.PNG)
 
 ### First Error
-Using the Bad Record file we can check which row had the error. Going back to the orginal data we see that the row shift was due to the extra ; in between 118 and 01 making it two seperate numbers. There must have been a error in loading the data that caused it to add the semicolon.
+Using the Bad Record file we can check which row had the error. Going back to the original data we see that the row shift was due to the extra ; in between 118 and 01 making it two separate numbers. There must have been an error in loading the data that caused it to add the semicolon.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl34.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl35.PNG)
@@ -218,7 +218,7 @@ Here we will use `INSERT INTO` to move the data in the RAW table to the newly ma
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl39.PNG)
 
 ### Second Error
-Here we got the error message `Error converting data type varchar to float.` This is the benefit of starting with a RAW table and converting into a WRK. Because of the implicit conversion, if we try to add data that doesnt conform to the data type we selected it will give us an error. Since the error was for the Floats we only have to check the 2014, 2015, and 2016E columns. 
+Here we got the error message `Error converting data type varchar to float.` This is the benefit of starting with a RAW table and converting into a WRK. Because of the implicit conversion, if we try to add data that doesn't conform to the data type we selected it will give us an error. Since the error was for the Floats we only have to check the 2014, 2015, and 2016E columns. 
 
 Below we start by opening a new query window and trying to find the error at each column. The first part of the SQL code below is checking that all the data in Column 2014 is a number,`isnumeric()`, if it's false we get a 0 meaning there's a string somewhere. The second portion filters the rows that have empty cell since those wouldn't be real errors.  
 
@@ -247,35 +247,35 @@ OR [2015] = ''
 --(1409998 row(s) affected)
 ```
 ## Part IV: MS SQL Continued
-Next we can check for any date errors. We do this by thinking a little bit about the business. How old do you think this company would hold on to it's records? How old could this company be? Older than 50, 60 years? These are just things we may have to check. I'm making an assumption that this company can't have data older than 1965. Second portion of the code checks that there arent date issues for the future, in this case past 2016. Here we see our 3rd Error
+Next we can check for any date errors. We do this by thinking a little bit about the business. How old do you think this company would hold on to it's records? How old could this company be? Older than 50, 60 years? These are just things we may have to check. I'm making an assumption that this company can't have data older than 1965. Second portion of the code checks that there aren't date issues for the future, in this case past 2016. Here we see our 3rd Error
 
 ### Third Error
 This one seems to be a typo error as well, meaning to enter 1999 instead of 1899. Unless this company was servicing horse and buggy!?!
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl44.PNG)
 
-Next lets check if we truly have unique numbers for CustomerID. We do this by using the `COUNT()` function to create a new column counting the number of CustomerID grouping by CustomerID and only pulling the rows where `COUNT` is greater than 1 so any duplicates. 
+Next let's check if we truly have unique numbers for CustomerID. We do this by using the `COUNT()` function to create a new column counting the number of CustomerID grouping by CustomerID and only pulling the rows where `COUNT` is greater than 1 so any duplicates. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl42.PNG)
 
 ### Fourth Error
-Here we see that we have 2 duplicate CustomerID. Taking it further, we can use the CustomerID `3490750` to check what happpened at these rows. As we can see, there was an error in creating the CustomerID as the rest of the data seems to indicate two seperate customers.
+Here we see that we have 2 duplicate CustomerID. Taking it further, we can use the CustomerID `3490750` to check what happened at these rows. As we can see, there was an error in creating the CustomerID as the rest of the data seems to indicate two separate customers.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/ETL43.PNG)
 
 ### Fifth Error
-For the last error we did a couple different check. I looked at average, min, and max for the sales columns. We find our final problem by seeing that most of the column averages were around 300 and 2015/2016E maxes were in the similiar 300-400 range. 2014 max however has a max of 2000 which is a major outlier in this dataset. 
+For the last error we did a couple different check. I looked at average, min, and max for the sales columns. We find our final problem by seeing that most of the column averages were around 300 and 2015/2016E maxes were in the similar 300-400 range. 2014 max however has a max of 2000 which is a major outlier in this dataset. 
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/ETL45.PNG)
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/INFO.PNG)
 
 
-Finally we will preform the final sum check. Adding up all the 2016E and making sure it match what we recieved in the begining of this challege. In order to do so we will gather the excluded rows and get the current total of the 2016E from SQL. Using Excel to see if everything adds up and does!
+Finally we will preform the final sum check. Adding up all the 2016E and making sure it match what we received in the beginning of this challenge. In order to do so we will gather the excluded rows and get the current total of the 2016E from SQL. Using Excel to see if everything adds up and does!
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl46.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl47.PNG)
 
 
 ## Final Thoughts
-I really appricate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
+Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up 50 to 80 percent of your time on a project. Meaning these tools, SSIS, SQL, can be the most important skills to have as a data scientist. As I do more projects, I can attest to the fact that most models can be reused. Most of the times one can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think i would need a couple computers, or maybe a GPU on AWS, or maybe Hadoop? 
