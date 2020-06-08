@@ -14,7 +14,7 @@ The dataset is just over 1.05M rows and has 5 errors that we need to try to find
 2. You know that the total projected revenue for 2016 equals: $419,896,187.87
 3. Give a small explanation to how the error might of occurred.
 
-Link to GitHub Repo: [GitHub]()
+Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)
 
 Link to Tableau Visualizations: [Visualization]()
 
