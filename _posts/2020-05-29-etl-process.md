@@ -50,7 +50,7 @@ Here we highlight all the columns and switch everything to text. Click Finish.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl7.PNG)
 
-Now that we have the data loaded. We will make sure all the columns are formated properly, first with the dates. Although already in YYYY-MM-DD format we want to make sure nothing changes when we export the data as a csv file. Using Text to Column in the Data tab below.
+Now that we have the data loaded. We will make sure all the columns are formatted properly, first with the dates. Although already in YYYY-MM-DD format we want to make sure nothing changes when we export the data as a csv file. Using Text to Column in the Data tab below.
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl8.PNG)
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl9.PNG)
@@ -245,12 +245,11 @@ WHERE ISNUMERIC([2015])	= 1
 OR [2015] = ''
 --(1409998 row(s) affected)
 ```
-*
 ## Part IV: MS SQL Continued
-Next we can check for any date errors. We do this by thinking a little bit about the business. How old do you think this company would hold on to it's records? How old could this company be? Older than 50, 60 years? These are just things we may have to check. I'm making an assumption that this company can't have data older than 1965. Second portion of the code checks that there aren't date issues for the future, in this case past 2016. Here we see our 3rd Error
+Next we can check for any date errors. We do this by thinking a little bit about the business. How old do you think this company would hold on to its records? How old could this company be? Older than 50, 60 years? These are just things we may have to check. I'm making an assumption that this company can't have data older than 1965. Second portion of the code checks that there aren't date issues for the future, in this case past 2016. Here we see our 3rd Error.
 
 ### Third Error
-This one seems to be a typo error as well, meaning to enter 1999 instead of 1899. Unless this company was servicing horse and buggy!?!
+This one seems to be a typo error as well, meaning to enter 1999 instead of 1899. Unless this company was servicing horse and buggies!?!
 
 ![ETL](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/ETL/etl44.PNG)
 
@@ -278,4 +277,4 @@ Finally we will preform the final sum check. Adding up all the 2016E and making 
 
 
 ## Final Thoughts
-Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up 50 to 80 percent of your time on a project. Meaning these tools, SSIS, SQL, can be the most important skills to have as a data scientist. As I do more projects, I can attest to the fact that most models can be reused. Most of the times one can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think i would need a couple computers, or maybe a GPU on AWS, or maybe Hadoop? 
+Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up to 50-80 percent of your time on a project. Meaning these tools and skills can be the most important part and ensures reliability in the conclusions we make in our analysis. As I do more projects, I can attest to the fact that most models can be reused. One can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think I would need a couple computers, or maybe a GPU on AWS?
