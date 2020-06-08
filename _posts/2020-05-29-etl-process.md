@@ -16,8 +16,6 @@ The dataset is just over 1.05M rows and has 5 errors that we need to try to find
 
 Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)
 
-Link to Tableau Visualizations: [Visualization]()
-
 
 ## Part I: NotePad++ & Excel
 Now to start, the most important thing is to track as much as possible the changes that happen to the original data and always keep a copy of the original data unchanged. This allows us to have options in case we make any mistakes. In my GitHub Repo there is a break down of the way I format the folders in projects. I make a copy of the original data and move it to the Prepared Data folder and work on it only through this folder. 
