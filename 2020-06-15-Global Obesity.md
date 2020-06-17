@@ -7,7 +7,7 @@ mathjax: "true"
 ---
 
 # Project Overview
-The goal of this project is to better understand US Non-profit organizations and how they perform when compared to each other based on income, revenue, and assets. Furthermore, we will look at the Top 10 Non-profits in the regions and the Top 10 per state. The Dataset was obtained from Kaggle, which contains information on US Non-profits broken up into three regions. We will clean the data, isolate the info needed, and export data to be visualized in Tableau. 
+The goal of this project is to better understand global obestiy and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data, isolate the info needed, and export data to be visualized in Tableau. 
 
 Link to Dataset: [Non-Profit](https://www.kaggle.com/crawford/us-charities-and-nonprofits)
 
