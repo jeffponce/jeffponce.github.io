@@ -7,9 +7,12 @@ mathjax: "true"
 ---
 
 # Project Overview
-The goal of this project is to better understand global obestiy and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data, isolate the info needed, and export data to be visualized in Tableau. 
+The goal of this project is to better understand global obestiy and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data and do some exploratory data analysis on the data to answer some questions. I also want to create a map that will show the change over time. Seeing which countries in 2016 have a BMI higher than 30. I will do this by joining anouther dataset that I like to use, countries of the world.csv, which has additional information such as population, regions, GDP, etc.
 
-Link to Dataset: [Non-Profit](https://www.kaggle.com/crawford/us-charities-and-nonprofits)
+Which countries have the highest average BMI?
+How has the BMI changed over the decades?
+
+Link to Dataset: [Global Obesity]()
 
 Link to GitHub Repo: [GitHub](https://github.com/jeffponce/non-profit-analysis)
 
