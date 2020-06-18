@@ -30,13 +30,33 @@ plt.rcParams['figure.figsize'] = 20,20
 import warnings
 warnings.filterwarnings('ignore')
 
-#Import Data using Pandas
-ds1 = pd.read_csv('eo1.csv') 
-ds2 = pd.read_csv('eo2.csv') 
-ds3 = pd.read_csv('eo3.csv')
-
-ds1.head()
+# Import Data
+data = pd.read_csv('data.csv')
+data.head(10)
 ```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob.png)
+
+Some thing we can see off the bat is that this data is in what they called wide form, we will need to fix that. The first column is `Unnamed: 0` which we will rename or drop depending on how the pivot turns out. We have 2016, 2016.1, and 2016.2 as an indicator for Male, Female, and Both Genders. The BMI has a lower estimate and a higher estimate which we will need to seperate from the actual BMI.
+
+Looking at it, I think we will rename the column before the pivot to be sure we dont lose information. The Melt() function is a very useful way to pivot the data from wide form into long form which is more how computers read data than how humans read it.
+
+```python
+# Rename Column & Preform Pivot
+df = data.copy()
+df.rename(columns={'Unnamed: 0':'country'}, inplace=True)
+df=df.melt(id_vars=['country'],var_name='year')
+```
+
+Next we will drop the top three rows as they are just extra information, this will also reset the index to account for the removed rows. Our thrid line of code will split the year column using the `'.'` portion to use the numbers to assign the genders.
+
+```python
+# Drop the first three rows and Split the year to get gender
+df = df.drop([0,1,2]).reset_index()
+df = df.drop(columns = ['index'])
+df[['year','gender']] = df['year'].str.split('.',expand=True)
+df
+```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob1.png)
 
 ## Exploratory Data Analysis (EDA)
 
