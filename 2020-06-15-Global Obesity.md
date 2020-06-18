@@ -58,6 +58,67 @@ df
 ```
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob1.png)
 
+Next we will map the genders using the numbers we aquired from the split we did. None will be `both sex`, 1 will be `male`, and 2 will be `female`. 
+```python
+# Mapping the gender using the numbers we split
+df['gender']=df['gender'].map({None:'both sex','1':'male','2':'female'})
+df
+```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob2.png)
+
+We will also use the `str.split` function to seperate the lower and higher estimate from the averaged BMI. Using the `-` and `[]` alllows us to isolate the numbers from the data. The last part reorders the columns for this new dataset.
+
+```python
+# Seperate BMI Values
+df.rename(columns = {'value': 'BMI'}, inplace=True)
+df_copy = df.copy()
+df['BMI'] = df_copy['BMI'].str.split('[', expand=True)
+df['lowest_est_BMI'] = df_copy['BMI'].str.split('[', expand=True)[1].str.split('-', expand=True)[0]
+df['highest_est_BMI'] = df_copy['BMI'].str.split('[', expand=True)[1].str.split('-', expand=True)[1].str.split(']', expand=True)[0]
+
+# Reset the column order
+df = df[['country', 'year', 'gender', 'BMI', 'lowest_est_BMI', 'highest_est_BMI']]
+df
+```
+
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob3.png)
+
+This look pretty good and one might assume to just start doing anaylsis, but I like to do more checks to be sure we dont get scewed data. Lets look at the rows with no data.
+
+```python
+print(df[df.BMI=='No data'].country.value_counts())
+```
+
+We get four countries that have no data, South Sudan, Sudan, San Marino, and Monaco. The below code will remove these countries from the dataset. 879 rows were removed.
+
+```python
+# Remove no data rows
+df1=df.dropna(subset=['country'])
+df1=df1.drop(df[df.country=='Country'].index)
+con=df1[df1.BMI=='No data'].country.value_counts().index
+df2=df1[~df1.country.isin(con)]
+```
+Now let's look at our data types. Below we see that BMI, lowest_est_BMI, and highest_est_BMI were set as objects, we will need to switch them over to floats. The code below is one way to get this accomplished. 
+
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob4.png)
+
+```python
+df2['BMI'] = pd.to_numeric(df2['BMI'], errors = 'coerce')
+df2['lowest_est_BMI'] = pd.to_numeric(df2['lowest_est_BMI'], errors = 'coerce')
+df2['highest_est_BMI'] = pd.to_numeric(df2['highest_est_BMI'], errors = 'coerce')
+```
+Now we see these set as floats.
+
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob5.png)
+
+Only thing left to check is the counts on the year and gender columns. Below we see everything is looking good. Time to do some EDA!
+
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob6.png)
+
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob7.png)
+
+
+
 ## Exploratory Data Analysis (EDA)
 
 ### Map of Average Income per State
