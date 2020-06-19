@@ -121,24 +121,46 @@ Only thing left to check is the counts on the year and gender columns. Below we 
 
 ## Exploratory Data Analysis (EDA)
 
-### Map of Average Income per State
-![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda2.png)
+### Distribution Change -  10 Year
 
-Top 5 States:
-1. Massachusetts  $18.4B
-2. Oregon  $12.6B
-3. Illinois  $11.3B
-4. Washington  $10.0B
-5. Maryland  $8.6B
+The below code helps us understand how the BMI has changed over the decades. As we can see the distribution starts to move to right, meaning on average we have a higher BMIs then our 1975 counterparts. Very interesting to see the constant dip in the middle range of BMIs. 
 
-### Top 10 Based on Income
-![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda3.png)
+```python
+# Distribution Every 10 Years
 
-### Top 10 Based on Revenue
-![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda4.png)
+sns.distplot(df2[df2.year=='1975'].BMI,hist=False,label='1975')
+sns.distplot(df2[df2.year=='1985'].BMI,hist=False,label='1985')
+sns.distplot(df2[df2.year=='1995'].BMI,hist=False,label='1995') 
+sns.distplot(df2[df2.year=='2005'].BMI,hist=False,label='2005') 
+sns.distplot(df2[df2.year=='2016'].BMI,hist=False,label='2016')
 
-### Top 10 Based on Assets
-![Non-profit](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Non-profit/eda5.png)
+plt.title('BMI Distribution through the Years',size=20)
+
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.2, fontsize = 'x-large')
+
+plt.show()
+```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/eda.png)
+
+We see a similiar distirbution change with the viola charts that we use to seperate between both sexes, males, and females. We do see a larger BMI distirbution with females than males.
+
+```python
+data_temp=df2[df2.year.isin(['1975','1985','1995','2005','2016'])]
+g = sns.FacetGrid(data_temp, row = 'gender', col = 'year', hue = 'gender')
+g = g.map(sns.violinplot, 'year', 'BMI')
+plt.show()
+```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/eda1.png)
+
+### Top 10 Countries based on BMI
+
+```python
+data_temp1=df3[df3.year.isin(['1975','1985','1995','2005','2016'])]
+g = sns.FacetGrid(data_temp1, col = 'year', sharey=False)
+g = g.map(sns.barplot, 'BMI', 'country')
+plt.show()
+```
+![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/eda2.png)
 
 ## Final Thoughts
 I really appreciate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
