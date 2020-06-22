@@ -162,6 +162,11 @@ plt.show()
 ```
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/eda2.png)
 
+The visual above doesn't change much over the decades. Seems rather misleading as although I can understand per capita these Polynesian/Micronesian islands may have higher BMI, other countries have increased much over the decades. Below I created a Gif from a Tableau graph using this data to visualize some of the other countires we see increases. As we can imagine, USA and Austrilia are high but also some middle eastern countires like Egypt and Saudia Arabia. 
+
+![Alt Text](https://github.com/jeffponce/jeffponce.github.io/blob/master/gif/Obesity.gif)
+
+
 ## Final Thoughts
 I really appreciate anyone who took the time to read through. I'm mainly building these posts as a way to reteach myself the tools and techniques I have been using and learning the past year and half. Hopefully with the help of the Protégé Effect where by teaching, or even pretending to teach, information to others helps that person learn the information. I'm looking forward to making more complex projects and solving business problems. Thank you again!
 
