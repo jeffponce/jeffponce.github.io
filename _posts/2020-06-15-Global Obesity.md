@@ -162,7 +162,7 @@ plt.show()
 
 The visual above doesn't change much over the decades. Seems rather misleading as although I can understand per capita these Polynesian/Micronesian islands may have higher BMI, other countries have increased much over the decades. Below I created a Gif from a Tableau graph using this data to visualize some of the other countires we see increases. As we can imagine, USA and Austrilia are high but also some middle eastern countires like Egypt and Saudia Arabia. 
 
-![ALT](images/Obesity.gif)
+![ALT](Obesity.gif)
 
 
 ## Final Thoughts
