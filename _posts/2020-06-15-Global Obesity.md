@@ -7,7 +7,7 @@ mathjax: "true"
 ---
 
 # Project Overview
-The goal of this project is to better understand global obestiy and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data and do some exploratory data analysis on the data to answer some questions. I also want to create a map that will show the change over time. Seeing which countries in 2016 have a BMI higher than 30. I will do this by joining anouther dataset that I like to use, countries of the world.csv, which has additional information such as population, regions, GDP, etc. I will add the dataset to my Github Repo.
+The goal of this project is to better understand global obestiy and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data and do some exploratory data analysis on the data to answer some questions. I also want to create a map that will show the change over time. Seeing which countries in 2016 have a BMI higher than 30. I will do this by joining anouther dataset that I like to use, countries of the world.csv, which has additional information such as population, regions, GDP, etc. I will add the dataset to my Github Repo, the Gif will also be added and link to it is below.
 
 Which countries have the highest average BMI?
 How has the BMI changed over the decades?
@@ -162,8 +162,7 @@ plt.show()
 
 The visual above doesn't change much over the decades. Seems rather misleading as although I can understand per capita these Polynesian/Micronesian islands may have higher BMI, other countries have increased much over the decades. Below I created a Gif from a Tableau graph using this data to visualize some of the other countires we see increases. As we can imagine, USA and Austrilia are high but also some middle eastern countires like Egypt and Saudia Arabia. 
 
-![ALT](Obesity.gif)
-
+<div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:76.39%;position:relative;"><iframe width="360" height="275" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/460mnm"></iframe></div><p><a href="https://imgflip.com/gif/460mnm">via Imgflip</a></p></div>
 
 ## Final Thoughts
 This was a good project to practice some data cleaning on Python which was something I was to incorperate in my future projects. I think as an American, sometime we make assumuption about the world and although I've known about our obesity problems. It was helpful to get dirty and visualize to truly see what is going on in the world. I never thought of the Middle East having a higher BMI than some Western European countries. Having family in Chile and Argentina, it's interesting to see their BMis being slightly higher than the rest of south American countries. From experiance I know they have a diet that revolved around white bread and grilled meats. As we can see China and India have lower BMIs, where they eat slightly more vegeterian diets. I believe other factor can be attributing to these numbers, such as lack of food or higher poverty. I think as all things we need moderation and maybe eat some more veggies with that grilled steak!
