@@ -7,10 +7,11 @@ mathjax: "true"
 ---
 
 # Project Overview
-The goal of this project is to better understand global obesity and how it's changed over the years. This dataset comes from the WHO and looks at the BMI for Males, Females, and an averaged BMI for both genders.  We will clean the data and do some exploratory data analysis on the data to answer some questions. I also want to create a map that will show the change over time. Seeing which countries in 2016 have a BMI higher than 30. I will do this by joining another dataset that I like to use, countries of the world.csv, which has additional information such as population, regions, GDP, etc. I will add the dataset to my Github Repo, the Gif will also be added and link to it is below.
+The goal of this project is to better understand global obesity and how it has changed over the years. This dataset comes from the World Health Organization and looks at the BMI of Males, Females, and an averaged BMI for both genders.  We will clean the data and do some exploratory data analysis on the data to answer questions like the ones below. I also want to create a heat map that will visualize the change over time for the countries. I will add the dataset to my Github Repo, the Gif will also be added and link to it is below.
 
-Which countries have the highest average BMI?
-How has the BMI changed over the decades?
+Which countries have the highest average BMI?  
+How has the BMI changed over the decades?  
+Which countries in 2016 have a BMI higher than 30, or Obese?  
 
 Link to GitHub Repo: [GitHub](https://github.com/jeffponce/non-profit-analysis)
 
@@ -34,9 +35,9 @@ data.head(10)
 ```
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob.png)
 
-Some thing we can see off the bat is that this data is in what they called wide form, we will need to fix that. The first column is `Unnamed: 0` which we will rename or drop depending on how the pivot turns out. We have 2016, 2016.1, and 2016.2 as an indicator for Male, Female, and Both Genders. The BMI has a lower estimate and a higher estimate which we will need to separate from the actual BMI.
+Some thing we can see off the bat is that this data is in what we call wide form, we will need to fix that. The first column is `Unnamed: 0` which we will rename or drop depending on how the pivot turns out. We have 2016, 2016.1, and 2016.2 as an indicator for Male, Female, and Both Genders. The BMI has a lower estimate and a higher estimate which we will need to separate from the actual BMI.
 
-Looking at it, I think we will rename the column before the pivot to be sure we don’t lose information. The Melt() function is a very useful way to pivot the data from wide form into long form which is more how computers read data than how humans read it.
+Looking at it, I think we will rename the column before the pivot to be sure we don’t lose information. The Melt() function is a very useful way to pivot the data from wide form into long form, the latter being how computers read data versus how we read it.
 
 ```python
 # Rename Column & Preform Pivot
@@ -45,7 +46,7 @@ df.rename(columns={'Unnamed: 0':'country'}, inplace=True)
 df=df.melt(id_vars=['country'],var_name='year')
 ```
 
-Next we will drop the top three rows as they are just extra information, this will also reset the index to account for the removed rows. Our third line of code will split the year column using the `'.'` portion to use the numbers to assign the genders.
+Next we will drop the top three rows as they are just extra information, this will also reset the index to account for the removed rows. Our third line of code will split the year column using the `'.'` to create a new `gender` column to use theses numbers to assign the gender categories.
 
 ```python
 # Drop the first three rows and Split the year to get gender
@@ -56,7 +57,7 @@ df
 ```
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob1.png)
 
-Next we will map the genders using the numbers we acquired from the split we did. None will be `both sex`, 1 will be `male`, and 2 will be `female`. 
+Next we will map the genders using the numbers we acquired from the split. None will be `both sex`, 1 will be `male`, and 2 will be `female`. 
 ```python
 # Mapping the gender using the numbers we split
 df['gender']=df['gender'].map({None:'both sex','1':'male','2':'female'})
@@ -81,7 +82,7 @@ df
 
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/ob3.png)
 
-This look pretty good and one might assume to just start doing analysis, but I like to do more checks to be sure we don’t get skewed data. Lets look at the rows with no data.
+This looks pretty good and one might assume to just start doing analysis, but I like to do more checks to be sure we don’t have skewed data. Let us look at the rows with no data.
 
 ```python
 print(df[df.BMI=='No data'].country.value_counts())
@@ -121,7 +122,7 @@ Only thing left to check is the counts on the year and gender columns. Below we 
 
 ### Distribution Change -  10 Year
 
-The below code helps us understand how the BMI has changed over the decades. As we can see the distribution starts to move to right, meaning on average we have a higher BMIs then our 1975 counterparts. Very interesting to see the constant dip in the middle range of BMIs. 
+The below code helps us understand how the BMI has changed over the decades. As we can see the distribution starts to move to right, meaning on average we have a higher BMIs than our 1975 counterparts. Very interesting to see the constant dip in the middle range of BMIs. 
 
 ```python
 # Distribution Every 10 Years
@@ -140,7 +141,7 @@ plt.show()
 ```
 ![Obesity](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/Obesity/eda.png)
 
-We see a similar distribution change with the viola charts that we use to separate between both sexes, males, and females. We do see a larger BMI distribution with females than males.
+We see a similar distribution change with the viola charts that we use to see differences between both sexes, males, and females. We do see a larger BMI distribution with females than males.
 
 ```python
 data_temp=df2[df2.year.isin(['1975','1985','1995','2005','2016'])]
@@ -165,7 +166,7 @@ The visual above doesn't change much over the decades. Seems rather misleading a
 <div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:76.39%;position:relative;"><iframe width="360" height="275" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/460mnm"></iframe></div><p><a href="https://imgflip.com/gif/460mnm">via Imgflip</a></p></div>
 
 ## Final Thoughts
-This was a good project to practice some data cleaning on Python which was something I was to incorporate in my future projects. I think as an American, sometime we make assumption about the world and although I've known about our obesity problems. It was helpful to get dirty and visualize to truly see what is going on in the world. I never thought of the Middle East having a higher BMI than some Western European countries. Having family in Chile and Argentina, it's interesting to see their BMIs being slightly higher than the rest of south American countries. From experience I know they have a diet that revolved around white bread and grilled meats. As we can see China and India have lower BMIs, where they eat slightly more vegetarian diets. I believe other factor can be attributing to these numbers, such as lack of food or higher poverty. I think as all things we need moderation and maybe eat some more veggies with that grilled steak!
+This was a good project to practice some data cleaning on Python which was something I wanted to incorporate in my future projects. I think as an American, sometimes we make assumption about the world and although I've known about our obesity problems. It was helpful to get dirty and visualize to truly see what is going on in the world. I never thought of the Middle East having a higher BMI than some Western European countries. Having family in Chile and Argentina, it's interesting to see their BMIs being slightly higher than the rest of South American countries. From experience I know they have a diet that revolved around white bread and grilled meats. As we can see China and India have lower BMIs, countries where they eat slightly more vegetarian diets. I believe other factor can be attributing to these numbers, such as lack of healthy food options or higher poverty. I think as all things we need moderation and maybe eating some more veggies with that grilled steak!
 
 Note: I did load this data and join it with another dataset, countries of the world, which I use to add regions, population, and other demographics to other data. In this case, we really couldn't use much of the information since I decided to keep it simple. I will add the code, dataset, and the uploaded dataset used in Tableau.
 
