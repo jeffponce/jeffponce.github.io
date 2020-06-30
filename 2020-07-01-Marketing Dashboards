@@ -1,0 +1,24 @@
+---
+title: "Marketing Dashboards"
+date: 2020-07-01
+tags: 
+excerpt: "Data Anlysis"
+mathjax: "true"
+---
+
+# Project Overview
+The goal of this project to showcase three powerful dashboards that can be used to improve marketing decisions. We will do a buyer persona dashboard to understand the demographics of our customers. Next we will create a email marketing dashboard that can help understand what types of email campaign work best and when to send them to your email lists. Finally we will look at a quick way to see which promotions are making the strongest waves when it comes to sales. 
+
+The datasets are sample dummy data from Google Anaytics and Kaggle. I will have copies of the datasets used in my Github Repo for this project.
+
+Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)
+Link to Tableau Public: [Tableau](https://public.tableau.com/profile/jeff.ponce#!/?newProfile=&activeTab=0)
+
+## Part I: Buyer Persona Dashboard
+
+## Part II: Email Marketing Dashboard
+
+## Part III: Promotional Impact 
+
+## Final Thoughts
+Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up to 50-80 percent of your time on a project. Meaning these tools and skills can be the most important part and ensures reliability in the conclusions we make in our analysis. As I do more projects, I can attest to the fact that most models can be reused. One can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think I would need a couple computers, or maybe a GPU on AWS?
