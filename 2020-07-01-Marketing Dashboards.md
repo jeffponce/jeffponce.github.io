@@ -11,7 +11,7 @@ The goal of this project to showcase three powerful dashboards that can be used 
 
 The datasets are sample dummy data from Google Anaytics and Kaggle. I will have copies of the datasets used in my Github Repo for this project.
 
-Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)
+Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)  
 Link to Tableau Public: [Tableau](https://public.tableau.com/profile/jeff.ponce#!/?newProfile=&activeTab=0)
 
 ## Part I: Buyer Persona Dashboard
@@ -25,9 +25,9 @@ We have created idivdual KPIs, shown below, and place them at the top of our das
 
 These are important to have for a marketing manager or sales person who want to get the information as quickly as possible. Without getting into too much of the weed, below are breif explaination of the KPIs.
 
--Total Sales: We can use this to see what is selling the highest, where are we getting the highest sales, etc.
--Average Sale: Good indicator of the type of customers. Do they buy few expensive items, or a lot of inexpensive items?
--Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service.
+-Total Sales: We can use this to see what is selling the highest, where are we getting the highest sales, etc.  
+-Average Sale: Good indicator of the type of customers. Do they buy few expensive items, or a lot of inexpensive items?  
+-Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service.  
 
 
 
