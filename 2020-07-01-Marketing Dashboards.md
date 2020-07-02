@@ -21,19 +21,19 @@ First we start off with a good way of visualizing demographic data of customer i
 
 We have created idivdual KPIs, shown below, and place them at the top of our dashboard. I like to include these as numbers instead on the Tooltip of the graph so it give a good visual on what the numbers are when we start to filter in data.
 
-![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db1.png)
-
 These are important to have for a marketing manager or sales person who want to get the information as quickly as possible. Without getting into too much of the weed, below are breif explaination of the KPIs, or Key Performace Indicators.
 
 * Total Sales: We can use this to see what is selling the highest, where are we getting the highest sales, etc.  
 * Average Sale: Good indicator of the type of customers. Do they buy few expensive items, or a lot of inexpensive items?  
-* Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service. <br />
+* Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service.
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db1.png)
 
 Here we have a standard bar chart showing Total Sales seperated by the Category of items. We will be using this graph as a filter to dig deeper into the data. As we can see in this sample data, sales of handmade items account for a bulk of the sales for this company. 
 
-How can we use this to isolate what items to sell more of?  
-Can we start pivoting away from other items, such as vintage or furniture?  
-How does this look after we start isolating data?  
+*How can we use this to isolate what items to sell more of?  
+*Can we start pivoting away from other items, such as vintage or furniture?  
+*How does this look after we start isolating data?  
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db2.png)
 
