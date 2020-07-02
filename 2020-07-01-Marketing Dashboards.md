@@ -31,9 +31,9 @@ These are important to have for a marketing manager or sales person who want to 
 
 Here we have a standard bar chart showing Total Sales seperated by the Category of items. We will be using this graph as a filter to dig deeper into the data. As we can see in this sample data, sales of handmade items account for a bulk of the sales for this company. 
 
-*How can we use this to isolate what items to sell more of?  
-*Can we start pivoting away from other items, such as vintage or furniture?  
-*How does this look after we start isolating data?  
+* How can we use this to isolate what items to sell more of?  
+* Can we start pivoting away from other items, such as vintage or furniture?  
+* How does this look after we start isolating data?  
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db2.png)
 
