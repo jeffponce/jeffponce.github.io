@@ -27,7 +27,7 @@ These are important to have for a marketing manager or sales person who want to 
 
 * Total Sales: We can use this to see what is selling the highest, where are we getting the highest sales, etc.  
 * Average Sale: Good indicator of the type of customers. Do they buy few expensive items, or a lot of inexpensive items?  
-* Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service. 
+* Number of Customers: Good when analysing territories and seeing where we are getting the most traction for our products/service. <br />
 
 Here we have a standard bar chart showing Total Sales seperated by the Category of items. We will be using this graph as a filter to dig deeper into the data. As we can see in this sample data, sales of handmade items account for a bulk of the sales for this company. 
 
