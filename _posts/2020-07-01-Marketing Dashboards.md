@@ -9,9 +9,8 @@ mathjax: "true"
 # Project Overview
 The goal of this project to showcase three powerful dashboards that can be used to improve marketing decisions. We will do a buyer persona dashboard to understand the demographics of our customers. Next we will create a email marketing dashboard that can help understand what types of email campaign work best and when to send them to your email lists. Finally we will look at a quick way to see which promotions are making the strongest waves when it comes to sales. These dashboards are a great tool to increase the ROI for marketing campaigns and adds great value to marketing managers and sales to direct their attention to what is going to directly increase sales. 
 
-The datasets are sample dummy data from Google Anaytics and Kaggle. I will have copies of the datasets used in my Github Repo for this project.
-
-Link to GitHub Repo: [GitHub](https://github.com/jeffponce/etl)  
+The datasets are sample dummy data from Google Anaytics provided by SuperDataScience.
+ 
 Link to Tableau Public: [Tableau](https://public.tableau.com/profile/jeff.ponce#!/?newProfile=&activeTab=0)
 
 ## Part I: Buyer Persona Dashboard
