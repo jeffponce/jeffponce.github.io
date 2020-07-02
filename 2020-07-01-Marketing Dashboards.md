@@ -71,7 +71,8 @@ Here we take it a step further. Close to half of our total sales came from 18-45
 
 ## Part II: Email Marketing Dashboard
 
-This next dashboard is usesul for email marketing data and see what is working and what is not working. You can also use this to test the effectiveness of our email campaigns and increasing ROI.
+This next dashboard is usesul for email marketing data and see what is working and what is not working. You can also use this to test the effectiveness of our email campaigns and increasing ROI. Dashboard has three sections to it. Top portion is our KPIs, next we have visualizations to see our sucesses, and the bottom portion has a calender heat map that shows when our emails are most effective. I will show the heat map later below when I show the visualizations indivdually. 
+
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db8.png)
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db10.png)
