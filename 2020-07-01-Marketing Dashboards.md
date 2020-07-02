@@ -39,25 +39,25 @@ Here we have a standard bar chart showing Total Sales seperated by the Category 
 
 Our second visualization on this dashboard will be a map with the total sales of each state. This company seems to be mainly based in North Carolina and has stores, or sales, in the southeast. We can use this see where our company is making headwinds and where we would need to focus on expanding. 
 
-How can we use this map to check our Sales by Category graph from before?  
-Are handmade items selling only in North Carolina?  
-Perhaps Florida has higher sales in Furniture?  
-Would pivoting away from Furiniture hurt business in Florida? Should we care?  
+* How can we use this map to check our Sales by Category graph from before?  
+* Are handmade items selling only in North Carolina?  
+* Perhaps Florida has higher sales in Furniture?  
+* Would pivoting away from Furiniture hurt business in Florida? Should we care?  
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db3.png)
 
 The last visualization is your standard age and gender distribution bar chart. We can use this graph to identify the age group and the gender of our customers. For marketing this is quite useful for marketing campaigns. 
 
-Using the two graphs from before, who do we target?  
-Who are our customer base? Who should we send promotions to?  
-What age group purchase high cost items?  
-How can we use this information to grow sales?  
+* Using the two graphs from before, who do we target?  
+* Who are our customer base? Who should we send promotions to?  
+* What age group purchase high cost items?  
+* How can we use this information to grow sales?  
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db4.png)
 
 Below we see the interactivity of this dashboard. As we start to click on our Sales by Category graph and/or our Sales by State map, these will filter to breakdown the data further. Is this example, we can see a majority of the customers from North Carolina that bought handmade items were 18-35 year old females. 
 
-How can we use this for our advantage in advertising our products?  
+* How can we use this for our advantage in advertising our products?  
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db5.png)
 
