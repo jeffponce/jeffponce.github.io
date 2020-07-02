@@ -71,6 +71,21 @@ Here we take it a step further. Close to half of our total sales came from 18-45
 
 ## Part II: Email Marketing Dashboard
 
+This next dashboard is usesul for email marketing data and see what is working and what is not working. You can also use this to test the effectiveness of our email campaigns and increasing ROI.
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db8.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
+
 ## Part III: Promotional Impact 
 
 ## Final Thoughts
