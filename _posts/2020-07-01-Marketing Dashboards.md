@@ -95,5 +95,11 @@ This next dashboard is usesul for email marketing data and see what is working a
 
 ## Part III: Promotional Impact 
 
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db18.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db19.png)
+
+![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db20.png)
+
 ## Final Thoughts
 Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up to 50-80 percent of your time on a project. Meaning these tools and skills can be the most important part and ensures reliability in the conclusions we make in our analysis. As I do more projects, I can attest to the fact that most models can be reused. One can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think I would need a couple computers, or maybe a GPU on AWS?
