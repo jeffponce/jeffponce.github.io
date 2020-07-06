@@ -122,7 +122,7 @@ We start comparing the Bounce Rate and Unsubcribed Rate between each email list.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db17.png)
 
 ## Part III: Promotional Impact 
-
+Our final marketing dashboard is going to be a shorter one but still powerful. Below is our Promotion Impact dashboard. First part we have our Total Sales KPI, next is a line graph visualizing the totals sales on a time line, and at the bottom we have.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db18.png)
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db19.png)
