@@ -122,12 +122,25 @@ We start comparing the Bounce Rate and Unsubcribed Rate between each email list.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db17.png)
 
 ## Part III: Promotional Impact 
-Our final marketing dashboard is going to be a shorter one but still powerful. Below is our Promotion Impact dashboard. First part we have our Total Sales KPI, next is a line graph visualizing the totals sales on a time line, and at the bottom we have.
+Our final marketing dashboard is going to be a shorter one but still powerful. Below is our Promotion Impact dashboard. First part we have our Total Sales KPI, next is a line graph visualizing the totals sales on a timeline, and at the bottom we have the promotions that were being run synconized to the timeline from the line graph above.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db18.png)
+
+As we start to click on the top line graph it starts to isolate which promotions were contributing to the total sales on that specifc day. In this situations we are trying to see what caused the substantial increase in sales for June 25. As we filter we see that the Stay Cool with These Deals promotion had a strong effect on customers. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db19.png)
 
+A much different effect than the below promotions highlighted that didn't do much for our sales and in a sense loss the company money. Mainly because there is some cost to making these promotions and push them out to your customers. 
+
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db20.png)
 
+We can use this tool to answer some important questions.
+
+* What in the Stay Cool with These Deals promotion was different than all the others?
+* Were the deals better? 
+* Did we send out the promotion before the weekend, in the middle of the week? 
+* Who did we target? 
+* How can we repeat this sucess to make sure were getting the most bang for our companies buck?
 ## Final Thoughts
-Many data science websites, bloggers, and teachers say that data processing and cleaning can be take up to 50-80 percent of your time on a project. Meaning these tools and skills can be the most important part and ensures reliability in the conclusions we make in our analysis. As I do more projects, I can attest to the fact that most models can be reused. One can use a template to get most of the model up and running in a relatively short amount of time. Total, without the 30 plus minute SSIS conditional split, it took us about 45 minutes to just find five errors in this challenge. One can only imagine Big Data datasets that can have billions of rows...I think I would need a couple computers, or maybe a GPU on AWS?
+A lot of what we believe of Data Science has been sensationaized by the idea of Machine Learning and Nueral Network, but most business problems don't need AI to solve. Most problems can be solved with a simple regression or classification model. I think we forget that what important in this industry to create value for the company and to increase ROI. Full Stop. Yes we can spend hours developing a CNN to identify Dog or Cat pictures but how does that help the company.
+
+I wanted to do this project to show some real world solutions that can be implimented to make data driven decsions in marketing. Any three of these dashboards can be delivered on a company's website for access and can be easily be used to find important information. This is what Data Science, in my opionion, is about. I come from selling Domestic Cast Iron pipe fittings in the Fire Protection industry, which is not sexy by any stretch of the imagination, but I still went out there and provided value to my customers. 
