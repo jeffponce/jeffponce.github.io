@@ -2,7 +2,7 @@
 title: "Marketing Dashboards"
 date: 2020-07-01
 tags: 
-excerpt: "Data Anlysis"
+excerpt: "Data Analysis"
 mathjax: "true"
 ---
 
