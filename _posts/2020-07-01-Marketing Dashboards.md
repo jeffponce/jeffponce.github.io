@@ -140,6 +140,7 @@ We can use this tool to answer some important questions.
 * Did we send out the promotion before the weekend, in the middle of the week? 
 * Who did we target? 
 * How can we repeat this success to make sure were getting the most bang for our company's buck?
+
 ## Final Thoughts
 A lot of what we believe of Data Science has been sensationalized by the idea of Machine Learning and Neural Network, but most business problems don't need AI to solve. Most problems can be solved with a simple regression or classification model. I think we forget that what's important in this industry is to create value for the company and to increase ROI. Full Stop. Yes we can spend hours developing a CNN to identify Dog or Cat pictures but how does that help the company increase sales or service quality.
 
