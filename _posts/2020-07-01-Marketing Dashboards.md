@@ -142,5 +142,4 @@ We can use this tool to answer some important questions.
 * How can we repeat this success to make sure were getting the most bang for our companies buck?
 ## Final Thoughts
 A lot of what we believe of Data Science has been sensationalized by the idea of Machine Learning and Neural Network, but most business problems don't need AI to solve. Most problems can be solved with a simple regression or classification model. I think we forget that what important in this industry to create value for the company and to increase ROI. Full Stop. Yes we can spend hours developing a CNN to identify Dog or Cat pictures but how does that help the company.
-
 I wanted to do this project to show some real world solutions that can be implemented to make data driven decisions in marketing. Any three of these dashboards can be delivered on a company's website for access and can be easily be used to find important information. This is what Data Science, in my opinion, is about. I come from selling Domestic Cast Iron pipe fittings in the Fire Protection industry, which is not sexy by any stretch of the imagination, but I still went out there and provided value to my customers. 
