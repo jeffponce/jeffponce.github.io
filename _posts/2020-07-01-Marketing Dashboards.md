@@ -20,7 +20,7 @@ First we start off with a good way of visualizing demographic data for customers
 
 We have created individual KPIs, shown below, and place them at the top of our dashboard. I like to include these as numbers instead of in the Tooltip of the graph so it gives a good visual on what the numbers are when we start to filter the data.
 
-These are important to have for a marketing manager or salesperson who want to get the information as quickly as possible. Without getting into the weeds, below is breif explanation of the KPIs, or Key Performance Indicators.
+These are important to have for a marketing manager or salesperson who want to get the information as quickly as possible. Without getting into the weeds, below is brief explanation of the KPIs, or Key Performance Indicators.
 
 * Total Sales: We can use this to see what is selling the highest, where are we getting the highest sales, etc.  
 * Average Sale: Good indicator of the type of customers. Do they buy few expensive items, or a lot of inexpensive items?  
@@ -74,7 +74,7 @@ This next dashboard is useful for email marketing data and seeing what is workin
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db8.png)
 
-Here we see the important KPIs realating to email marketing. Each helps our marketing manager have a quick view to how their campaigns are going.
+Here we see the important KPIs relating to email marketing. Each helps our marketing manager have a quick view to how their campaigns are going.
 
 * Total Sent: Give us the total amount of emails sent out.
 * Open Rate: The percentage of emails that were opened by the targets or customers. Checking emails are being opened and at least getting to a real person.
@@ -83,7 +83,7 @@ Here we see the important KPIs realating to email marketing. Each helps our mark
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db10.png)
 
-Our first visual is a TreeMap of the breakdown of our email marketing lists. We have our Master list, the Rewards Program list, and a Target Demographic list. This helps marketers determine what content to send to different targets. Very quickly we can see that the Master list, which has the most email addresses, onlt has a 5% Click Through Rate. Versus our Rewards Program list which has a 17% Click Through Rate. Why is that, and how can we improve this KPI?
+Our first visual is a TreeMap of the breakdown of our email marketing lists. We have our Master list, the Rewards Program list, and a Target Demographic list. This helps marketers determine what content to send to different targets. Very quickly we can see that the Master list, which has the most email addresses, only has a 5% Click Through Rate. Versus our Rewards Program list which has a 17% Click Through Rate. Why is that, and how can we improve this KPI?
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db11.png)
 
@@ -121,7 +121,7 @@ When we start comparing the Bounce Rate and Unsubscribed Rate between each email
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db17.png)
 
-## Part III: Promotional Impact *
+## Part III: Promotional Impact 
 Our final marketing dashboard is going to be a shorter one but still powerful. Below is our Promotion Impact dashboard. First part we have our Total Sales KPI, next is a line graph visualizing the totals sales on a timeline, and at the bottom we have the promotions that were being run synchronized to the timeline from the line graph above.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db18.png)
 
@@ -129,7 +129,7 @@ As we start to click on the top line graph it starts to isolate which promotions
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db19.png)
 
-A much different effect than the below promotions highlighted that didn't do much for our sales and in a sense loss the company money. Mainly because there is some cost to making these promotions and push them out to your customers. 
+A much different effect than the below promotions highlighted that didn't do much for our sales and in a sense loss the company money. Mainly because there was some cost to making these promotions and pushing them out to your customers. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db20.png)
 
@@ -139,8 +139,8 @@ We can use this tool to answer some important questions.
 * Were the deals better? 
 * Did we send out the promotion before the weekend, in the middle of the week? 
 * Who did we target? 
-* How can we repeat this success to make sure were getting the most bang for our companies buck?
+* How can we repeat this success to make sure were getting the most bang for our company's buck?
 ## Final Thoughts
-A lot of what we believe of Data Science has been sensationalized by the idea of Machine Learning and Neural Network, but most business problems don't need AI to solve. Most problems can be solved with a simple regression or classification model. I think we forget that what important in this industry to create value for the company and to increase ROI. Full Stop. Yes we can spend hours developing a CNN to identify Dog or Cat pictures but how does that help the company.
+A lot of what we believe of Data Science has been sensationalized by the idea of Machine Learning and Neural Network, but most business problems don't need AI to solve. Most problems can be solved with a simple regression or classification model. I think we forget that what's important in this industry is to create value for the company and to increase ROI. Full Stop. Yes we can spend hours developing a CNN to identify Dog or Cat pictures but how does that help the company increase sales or service quality.
 
-I wanted to do this project to show some real world solutions that can be implemented to make data driven decisions in marketing. Any three of these dashboards can be delivered on a company's website for access and can be easily be used to find important information. This is what Data Science, in my opinion, is about. I come from selling Domestic Cast Iron pipe fittings in the Fire Protection industry, which is not sexy by any stretch of the imagination, but I still went out there and provided value to my customers. 
+I wanted to do this project to show some real world solutions that can be implemented to make data driven decisions in marketing. Any three of these dashboards can be delivered on a company's website for access and can easily be used to find important information. This is what Data Science, in my opinion, is about. I come from selling Domestic Cast Iron pipe fittings in the Fire Protection industry, which is not sexy by any stretch of the imagination, but I still went out there everyday and focused on providing value to my customers. 
