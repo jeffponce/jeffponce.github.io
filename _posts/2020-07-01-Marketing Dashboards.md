@@ -68,30 +68,30 @@ Here we take it a step further. Close to half of our total sales came from 18-45
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db7.png)
 
-## Part II: Email Marketing Dashboard *
+## Part II: Email Marketing Dashboard 
 
-This next dashboard is useful for email marketing data and see what is working and what is not working. You can also use this to test the effectiveness of our email campaigns and increasing ROI. Dashboard has three sections to it. Top portion is our KPIs, next we have visualizations to see our successes, and the bottom portion has a calendar heat map that shows when our emails are most effective. I will show the heat map later below when I show the visualizations individually. 
+This next dashboard is useful for email marketing data and seeing what is working and what is not. You can also use this to test the effectiveness of our email campaigns and increasing ROI. This dashboard has three sections to it. Top portion is our KPIs, next we have visualizations to view our successes, and the bottom portion has a calendar heatmap that shows when our emails are most effective. I will show the heat map later below when I show each visualization individually. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db8.png)
 
-Here we see the important KPIs that relate to email marketing. Each helps our marketing manager have a quick view to how their campaign are going.
+Here we see the important KPIs realating to email marketing. Each helps our marketing manager have a quick view to how their campaigns are going.
 
 * Total Sent: Give us the total amount of emails sent out.
-* Open Rate: The percentage of emails that were opened by the targets or customers. So we can see that emails are being opened and at least getting to a real person.
+* Open Rate: The percentage of emails that were opened by the targets or customers. Checking emails are being opened and at least getting to a real person.
 * Total Unique Click: Help us see the true amount of clicks we get from our emails. For example, this will not include a customer who clicked on the link twice. 
-* Click Through Rate: This is the rate of the actual amount of people who clicked on your link in the email. Strong indicators of the interest of your content.
+* Click Through Rate: This is the rate of the actual amount of people who clicked on your link in the email ideally to buy. Strong indicator of the interest in your content.
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db10.png)
 
-Our first visual is a TreeMap of the breakdown of our email marketing lists. We have our Master list, the Rewards Program list, and a target demographic list. This helps marketers determine what content to send to different targets. Very quickly we can see that the Master list, which has the most email addresses, but has only a 5% Click Through Rate. Versus out Rewards Program list that has a 17% Click Through Rate. Why, and how can we improve that KPI?
+Our first visual is a TreeMap of the breakdown of our email marketing lists. We have our Master list, the Rewards Program list, and a Target Demographic list. This helps marketers determine what content to send to different targets. Very quickly we can see that the Master list, which has the most email addresses, onlt has a 5% Click Through Rate. Versus our Rewards Program list which has a 17% Click Through Rate. Why is that, and how can we improve this KPI?
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db11.png)
 
-This next visualization is a breakdown of our emails based on there type and Click Through Rates. We can use this to see which type of emails, Awareness, Promotion, and Discount, have the higher success rate or customers clicking on our links inside our emails. Very powerful when it come to ROI and making sure we are focusing on marketing that is successful.
+This next visualization is a breakdown of our emails based on there type and Click Through Rates. We can use this to see which type of emails, Awareness, Promotion, or Discount, have the higher success rate of customers clicking on our links inside our emails. Very powerful when it come to ROI and making sure we are focusing on marketing that is most successful.
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db12.png)
 
-Our final visualization is one of my favorite for marketing, a calendar HeatMap! This breakdowns the date and time of emails that were sent and compares the Open Rate, which give us the best day and time to send our email campaigns. As we start to use the fist two visualization this will change our calendar to show the best open rates for different campaigns or emails lists. 
+Our final visualization is one of my favorite for marketing, a calendar HeatMap! This breakdowns the date and time of emails that were sent and compares the Open Rate of each, which give us the best day and time to send our email campaigns. As we start to use the fist two visualization this will change our calendar to show the best open rates for different campaigns or emails lists. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db9.png)
 
@@ -99,29 +99,29 @@ Starting off, lets look at the breakdown of the Master list versus the Rewards P
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db13.png)
 
-When we compare to the Reward Program list, we see that they have a much higher Click Through Rate, 17% versus 5% in the Master list. Furthermore, we see that Awareness emails are extremely effective with out loyal customers, average Click Through Rate is 8% so 26% is rather high. Finally, we see that the Open Rate for our loyalty customers is 67% much higher than 26% from our Master list. 
+When we compare this to the Reward Program list, we see that they have a much higher Click Through Rate, 17% versus 5% in the Master list. Furthermore, we see that Awareness emails are extremely effective with our loyal customers at 26%. Finally, we see that the Open Rate for our loyalty customers was 67%, much higher than 26% from our Master list. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db14.png)
 
-In the below scenario, the marketing manager request to find the best times to send Awareness emails to our Reward Program list customers. As we can see, we highlighted our Reward Program list and the Awareness email type. 
+In the below scenario, the marketing manager request to find the best times to send Awareness emails to our Reward Program list customers. As we can see below, we highlighted our Reward Program list and the Awareness email type. 
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db15.png)
 
-Here we see that the best time to send would be Tuesday and Wednesday after 3pm. We also see a strong Open Rate on Saturday after 12pm. Now we can target these customer on these days to reduce excess emails and increase ROI.
+Here we see that the best time to send these would be Tuesday and Wednesday after 3pm. We also see a strong Open Rate on Saturday after 12pm. Now we can target these customer on these days to reduce excess emails and increase ROI.
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db16.png)
 
-Here we will answer the question, what in everything that is good in the world happened to our Master list and why do we have such low KPIs. One thing I want to throw out there first is that as this is a largest list, maybe it a better gauge of the true average. Maybe we go lucky with out Reward customer emails. Below we will work to check if there's anything wrong with the list. 
+Here we will answer the question, what in everything that is good in the world happened to our Master list and why do we have such low KPIs. One thing I want to throw out there first is that as this is a largest list, maybe this would be a better gauge of the true average. Maybe we got lucky with our Reward customer emails. Below we will work to check if there's anything wrong with the list. 
 
-We start comparing the Bounce Rate and Unsubscribed Rate between each email list. Bounce Rate tells us the amount of emails that get bounced back to us due to the emails being incorrect, as we can see for the Master list has a higher bounce rate. Unsubscribe rate is a good indicator of our quality of content, more people are unsubscribing to our Master list than the others. 
+When we start comparing the Bounce Rate and Unsubscribed Rate between each email list. Bounce Rate tells us the amount of emails that get bounced back to us due to the emails being incorrect, as we can see the Master list has a higher bounce rate. Unsubscribe rate is a good indicator of our quality of content, more people are unsubscribing to our Master list than the others. 
 
 * How can we adjust our content to start improving this metric with our Master list customers?
 * How can we convert them over to Reward Program customers?
-* Can we start tracking the bounced emails and delete or fix them?
+* Can we start tracking the bounced emails to delete or fix them?
 
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db17.png)
 
-## Part III: Promotional Impact 
+## Part III: Promotional Impact *
 Our final marketing dashboard is going to be a shorter one but still powerful. Below is our Promotion Impact dashboard. First part we have our Total Sales KPI, next is a line graph visualizing the totals sales on a timeline, and at the bottom we have the promotions that were being run synchronized to the timeline from the line graph above.
 ![DB](https://raw.githubusercontent.com/jeffponce/jeffponce.github.io/master/images/marketing_dashboards/db18.png)
 
